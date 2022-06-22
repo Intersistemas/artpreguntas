@@ -5,9 +5,9 @@ import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import { useDispatch } from 'react-redux'
-import { handleCambioDificultad, handleCambioSexo } from '../redux/actions'
+import { handleCambioDificultad, handleCambioSexo } from '../../redux/actions'
 
-const Combo = (props) => {
+const SelectComp = (props) => {
     const { label, options } = props;
     const dispatch = useDispatch();
     const [value, setValue] = useState('');
@@ -30,8 +30,13 @@ const Combo = (props) => {
     }
 
   return (
-    <Box mt={3} width="100%">
-        <FormControl fullWidth size="small">
+    <Box sx={{
+        display: 'flex',  
+        justifyContent: 'center',
+        width: '100%',
+        marginTop: '2%'
+      }}>
+        <FormControl fullWidth size='small'>
             <InputLabel>{label}</InputLabel>
             <Select value={value} label={label} onChange={handleChange}>
                 {options.map(({id, name}) => (
@@ -43,4 +48,4 @@ const Combo = (props) => {
   )
 }
 
-export default Combo
+export default SelectComp

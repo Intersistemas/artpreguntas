@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { handleCambioPuntuacion, handleCambioDNI, handleCambioDificultad, handleCambioEmail, handleCambioSexo } from '../redux/actions'
 import { useNavigate } from 'react-router-dom'
+import WebcamCapture from '../components/WebcamCapture'
+import Camara from '../components/Camara'
 
 const Resultado = () => {
   const dispatch = useDispatch();
@@ -22,8 +24,14 @@ const Resultado = () => {
 
   const { puntuacion } = useSelector(state => state)
   return (
-    <Box mt={30}>
+    <Box sx={{
+      display: 'flex-start',  
+      justifyContent: 'center',
+      width: '100%',
+      marginTop: '2%'
+    }}>
       <Typography variant="h3" fontWeight={"bold"} >Respuestas correctas: {puntuacion}</Typography>
+      <WebcamCapture />
       <Button onClick={handleClick} variant="outlined">Volver al inicio</Button>
     </Box>
   )

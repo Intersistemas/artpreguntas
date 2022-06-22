@@ -1,0 +1,16 @@
+.header{
+  border-bottom: 10px solid #83bc00;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+  border-radius: 20px;
+}
+
+.main-header h2 {
+  color: white;
+  font-size: xx-large;
+}
+
+.image {
+  margin: '1%'; 
+  zoom: '70%'
+}

@@ -19,6 +19,7 @@ const Pregunta = () => {
 
   const [indexPregunta, setIndexPregunta] = useState(0);
 
+  //#region Preguntas
   const preguntas = [
     { 
       id: 1, 
@@ -65,6 +66,7 @@ const Pregunta = () => {
     // { id: 9, pregunta: "", respuesta: "" },
     // { id: 10, pregunta: "", respuesta: "" },
   ]
+  //#endregion
 
   const handleClick = (e) => {
     const pregunta = preguntas[indexPregunta];
@@ -81,9 +83,14 @@ const Pregunta = () => {
   }
 
   return (
-    <Box>
-      <Typography variant="h4">Pregunta {indexPregunta + 1}</Typography>
-      <Typography mt={5}>{preguntas[indexPregunta].pregunta}</Typography>
+    <Box sx={{
+      //display: 'flex',  
+      //justifyContent: 'center',
+      width: '100%',
+      //marginTop: '2%'
+    }}>
+      <Typography variant="h3">Pregunta {indexPregunta + 1}</Typography>
+      <Typography variant="h5" mt={5}>{preguntas[indexPregunta].pregunta}</Typography>
       {preguntas[indexPregunta].opciones.map((opcion) => (
         <Box mt={2} key={opcion}>
           <Button key={opcion} variant="contained" onClick={handleClick}>{opcion}</Button>

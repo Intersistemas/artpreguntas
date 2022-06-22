@@ -1,0 +1,41 @@
+import { Box, Container } from '@mui/system';
+import  {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Inicio from '../pages/Inicio';
+import Pregunta from '../pages/Pregunta';
+import Resultado from '../pages/Resultado';
+import MainHeader from '../layout/MainHeader'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { green } from '@mui/material/colors';
+
+const theme = createTheme({
+  palette: {
+      primary:{
+        light: '#83BC00',
+        main: '#83BC00',
+        dark: 'green',
+        contrastText: '#fff',
+    },
+      secondary: green,
+    },
+});
+
+function App() {  
+  return (
+    <ThemeProvider theme={theme}>
+    <Router>
+      <MainHeader />
+      <Container maxWidth="md">
+        <Box textAlign={"center"} mt={3} width={"100%"}>        
+          <Routes>
+            <Route exact path="/" element={<Inicio />}/>          
+            <Route exact path="/pregunta" element={<Pregunta />}/> 
+            <Route path="/resultado" element={<Resultado />} />
+          </Routes>
+        </Box>
+      </Container>   
+    </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;

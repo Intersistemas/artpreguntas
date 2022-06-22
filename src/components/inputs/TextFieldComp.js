@@ -1,7 +1,7 @@
 import { Box } from '@mui/system'
 import { FormControl, TextField} from '@mui/material'
 import React, { useState } from 'react'
-import { handleCambioDNI, handleCambioEmail } from '../redux/actions'
+import { handleCambioDNI, handleCambioEmail } from '../../redux/actions'
 import { useDispatch } from 'react-redux'
 
 const TextFieldComp = (props) => {
@@ -27,8 +27,13 @@ const TextFieldComp = (props) => {
     }
     
   return (
-    <Box mt={3} width="100%">
-        <FormControl fullWidth>
+    <Box sx={{
+      display: 'flex',  
+      justifyContent: 'center',
+      width: '100%',
+      marginTop: '2%'
+    }}>
+        <FormControl fullWidth size='small'>
             <TextField
                 value={value}
                 onChange={handleChange}

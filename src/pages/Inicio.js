@@ -31,8 +31,8 @@ const Inicio = () => {
   return (
     <form onSubmit={handleSubmit}>
         <div className={style.text}>
-          <Typography variant="h2" fontWeight={"bold"}>ART Trivia</Typography>
-          <Typography variant="h6" fontWeight={"bold"}>VEAMOS QUE SABE DE RIESGOS DEL TRABAJO</Typography>
+          <Typography variant="h2" fontWeight={"bold"} color={'gray'}>ART Trivia</Typography>
+          <Typography variant="h6" fontWeight={"bold"} color={'gray'}>¿Qué sabemos del Riesgos del Trabajo?</Typography>
         </div>
         <TextFieldComp label="DNI" />
         <SelectComp options={opcionesSexo} label="Sexo" />

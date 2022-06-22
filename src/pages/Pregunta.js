@@ -23,44 +23,45 @@ const Pregunta = () => {
   const preguntas = [
     { 
       id: 1, 
-      pregunta: "CUANTOS AÑOS HACE QUE ESTA EL ACTUAL SISTEMA DE RIESGOS DE TRABAJO EN ARGENTINA?", 
+      pregunta: "¿Cuántos años hace que está el actual sistema de riesgos de trabajo en Argentina?", 
       opciones: ["50 años","25 años","15 años"], 
       respuesta: "50 años" 
     },
     { 
       id: 2, 
-      pregunta: "EL SISTEMA DE RIESGOS DE TRABAJO CUBRE LOS SINIESTROS QUE SUFREN:", 
+      pregunta: "El sistema de riesgos de trabajo cubre los siniestros que sufren:", 
       opciones: ["Los trabajadores titulares solamente en relación de dependencia","Los trabajadores y también a su grupo familiar","Los empleadores y los trabajadores"], 
       respuesta: "Los trabajadores titulares solamente en relación de dependencia" 
     },
     { 
-      id: 3, pregunta: "CUAL ES LA ACTIVIDAD QUE REGISTRA LOS MAYORES RIESGOS LABORALES?", 
-      opciones: ["Actividad Rural","Actividad Construcción","Actividad Turismo"], 
-      respuesta: "Actividad Rural" 
+      id: 3, 
+      pregunta: "¿Cuál es la actividad que registra los mayores riesgos laborales?", 
+      opciones: ["Actividad rural","Actividad construcción","Actividad turismo"], 
+      respuesta: "Actividad rural" 
     },
     { 
       id: 4, 
-      pregunta: "CUAL ES LA CORRECTA DEFINICION DE A.R.T.?", 
-      opciones: ["Asociacion de Riesgos del Trabajo","Aseguradora de Riesgos del Trabajo","Administradora de Riesgos del Trabajo"], 
-      respuesta: "Aseguradora de Riesgos del Trabajo" 
+      pregunta: "¿Cuál es la correcta definición de A.R.T.?", 
+      opciones: ["Asociación de riesgos del trabajo","Aseguradora de riesgos del trabajo","Administradora de riesgos del trabajo"], 
+      respuesta: "Aseguradora de riesgos del trabajo" 
     },
     { 
       id: 5, 
-      pregunta: "QUE ENTIDADES PUEDEN SER A.R.T.?", 
-      opciones: ["Solo empresas Comerciales (SA, SRL, ETC)","Solo entidades Mutuales (Sin fines de lucro)","Empresas Comerciales y Entidades Mutuales"], 
-      respuesta: "Solo empresas Comerciales (SA, SRL, ETC)" 
+      pregunta: "¿Qué entidades pueden ser A.R.T.?", 
+      opciones: ["Solo empresas comerciales (SA, SRL, etc)","Solo entidades mutuales (sin fines de lucro)","Empresas comerciales y entidades mutuales"], 
+      respuesta: "Solo empresas comerciales (SA, SRL, etc)" 
     },
     { 
       id: 6, 
-      pregunta: "QUIEN PAGA EL COSTO DEL SEGURO DE RIESGO LABORAL A LA ART?", 
+      pregunta: "¿Quién paga el costo del seguro de riesgo laboral a la A.R.T.?", 
       opciones: ["El empleador","El trabajador","El empleador y el trabajador juntos"], 
       respuesta: "El empleador" 
     },
     { 
       id: 7, 
-      pregunta: "TODAS LAS EMPRESAS PAGAN LO MISMO?", 
-      opciones: ["SI pagan lo mismo por una Alicuota Fija que marca la Ley","NO Pagan conforme sus años en la misma actividad","NO pagan conforme su real riesgo y antecedentes"], 
-      respuesta: "NO pagan conforme su real riesgo y antecedentes" 
+      pregunta: "¿Todas las empresas pagan lo mismo?", 
+      opciones: ["Sí, pagan lo mismo por una alícuota fija que marca la ley","No, pagan conforme sus años en la misma actividad","No, pagan conforme su real riesgo y antecedentes"], 
+      respuesta: "No, pagan conforme su real riesgo y antecedentes" 
     },
     // { id: 8, pregunta: "", respuesta: "" },
     // { id: 9, pregunta: "", respuesta: "" },

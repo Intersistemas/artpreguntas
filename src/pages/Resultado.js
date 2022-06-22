@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux'
 import { handleCambioPuntuacion, handleCambioDNI, handleCambioDificultad, handleCambioEmail, handleCambioSexo } from '../redux/actions'
 import { useNavigate } from 'react-router-dom'
 import WebcamCapture from '../components/WebcamCapture'
-import Camara from '../components/Camara'
 
 const Resultado = () => {
   const dispatch = useDispatch();
@@ -30,7 +29,7 @@ const Resultado = () => {
       width: '100%',
       marginTop: '2%'
     }}>
-      <Typography variant="h3" fontWeight={"bold"} >Respuestas correctas: {puntuacion}</Typography>
+      <Typography variant="h5" fontWeight={"bold"} color={'gray'}>Felicidades! Has finalizado la trivia con {puntuacion} respuestas correctas!</Typography>
       <WebcamCapture />
       <Button onClick={handleClick} variant="outlined">Volver al inicio</Button>
     </Box>

@@ -3,9 +3,11 @@ import  {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Inicio from '../pages/Inicio';
 import Pregunta from '../pages/Pregunta';
 import Resultado from '../pages/Resultado';
+import Mapa from '../mapa/Mapa';
 import MainHeader from '../layout/MainHeader'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
+
 
 const theme = createTheme({
   palette: {
@@ -30,6 +32,7 @@ function App() {
             <Route exact path="/" element={<Inicio />}/>          
             <Route exact path="/pregunta" element={<Pregunta />}/> 
             <Route path="/resultado" element={<Resultado />} />
+            <Route path="/Mapa" element={<Mapa />} />
           </Routes>
         </Box>
       </Container>   

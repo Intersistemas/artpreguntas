@@ -9,23 +9,30 @@ const TextFieldComp = (props) => {
     const dispatch = useDispatch();
     const [value, setValue] = useState('');
 
-    const handleChange = (e) => {
-      setValue(e.target.value)
-
+    const handleChange = (event) => {      
       switch(label) {
         case "DNI":
-          dispatch(handleCambioDNI(e.target.value));
+          const re = /^[0-9\b]+$/;
+          if(event.target.value === '' || re.test(event.target.value)) {
+            dispatch(handleCambioDNI(+event.target.value));
+          } else {
+            return
+          }          
           break;
+
         case "Nombre":
-          dispatch(handleCambioNombre(e.target.value));
+          dispatch(handleCambioNombre(event.target.value));
           break;
+
         case "Email":
-          dispatch(handleCambioEmail(e.target.value));
+          dispatch(handleCambioEmail(event.target.value));
           break;
 
         default:
           break;
       }
+
+      setValue(event.target.value)
     }
     
   return (

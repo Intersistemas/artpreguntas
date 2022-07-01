@@ -37,7 +37,7 @@
       "pregunta": "¿Qué entidades pueden ser A.R.T.?", 
       "opciones": ["Solo empresas comerciales (SA, SRL, etc)","Solo entidades mutuales (sin fines de lucro)","Empresas comerciales y entidades mutuales"], 
       "respuesta": "Solo empresas comerciales (SA, SRL, etc)",
-      "dificultad": "avazado"
+      "dificultad": "avanzado"
     },
     { 
       "id": 6, 

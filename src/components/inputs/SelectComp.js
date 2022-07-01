@@ -36,9 +36,10 @@ const SelectComp = (props) => {
   return (
     <Box sx={{
         display: 'flex',  
-        justifyContent: 'center',
+        //justifyContent: 'left',
         width: '100%',
-        marginTop: '2%'
+        marginTop: '2%',
+        textAlign: 'left'
       }}>
         <FormControl fullWidth size='small'>
             <InputLabel>{label}</InputLabel>

@@ -1,0 +1,5 @@
+[
+    { "id": "empresarural", "name": "Empresa Rural" },
+    { "id": "trabajadorrural", "name": "Trabajador Rural" },
+    { "id": "otro", "name": "Otro" }
+]

@@ -5,9 +5,9 @@ import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import { useDispatch } from 'react-redux'
-import { handleCambioDificultad, handleCambioSexo } from '../../redux/actions'
+import { handleCambioCategoria, handleCambioDificultad, handleCambioSexo } from '../../redux/actions'
 
-const SelectComp = (props) => {
+const SelectComp = (props) => {    
     const { label, options } = props;
     const dispatch = useDispatch();
     const [value, setValue] = useState('');
@@ -17,13 +17,17 @@ const SelectComp = (props) => {
 
         switch(label) {
             case "Dificultad":
-                console.log('dispatch')
                 dispatch(handleCambioDificultad(e.target.value));
                 break;
 
             case "Sexo":
                 dispatch(handleCambioSexo(e.target.value));
                 break;
+
+            case "Categoria":
+                dispatch(handleCambioCategoria(e.target.value));
+                break;
+
             default:
                 break;
         }

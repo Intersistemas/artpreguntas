@@ -1,0 +1,58 @@
+[
+    { 
+      "id": 1, 
+      "numero": 1,
+      "pregunta": "¿Cuántos años hace que está el actual sistema de riesgos de trabajo en Argentina?", 
+      "opciones": ["50 años","25 años","15 años"], 
+      "respuesta": "50 años",
+      "dificultad": "basico"
+    },
+    { 
+      "id": 2, 
+      "numero": 2,
+      "pregunta": "El sistema de riesgos de trabajo cubre los siniestros que sufren:", 
+      "opciones": ["Los trabajadores titulares solamente en relación de dependencia","Los trabajadores y también a su grupo familiar","Los empleadores y los trabajadores"], 
+      "respuesta": "Los trabajadores titulares solamente en relación de dependencia",
+      "dificultad": "basico"
+    },
+    { 
+      "id": 3, 
+      "numero": 3,
+      "pregunta": "¿Cuál es la actividad que registra los mayores riesgos laborales?", 
+      "opciones": ["Actividad rural","Actividad construcción","Actividad turismo"], 
+      "respuesta": "Actividad rural",
+      "dificultad": "basico"
+    },
+    { 
+      "id": 4, 
+      "numero": 1,
+      "pregunta": "¿Cuál es la correcta definición de A.R.T.?", 
+      "opciones": ["Asociación de riesgos del trabajo","Aseguradora de riesgos del trabajo","Administradora de riesgos del trabajo"], 
+      "respuesta": "Aseguradora de riesgos del trabajo",
+      "dificultad": "avanzado"
+    },
+    { 
+      "id": 5, 
+      "numero": 2,
+      "pregunta": "¿Qué entidades pueden ser A.R.T.?", 
+      "opciones": ["Solo empresas comerciales (SA, SRL, etc)","Solo entidades mutuales (sin fines de lucro)","Empresas comerciales y entidades mutuales"], 
+      "respuesta": "Solo empresas comerciales (SA, SRL, etc)",
+      "dificultad": "avazado"
+    },
+    { 
+      "id": 6, 
+      "numero": 3,
+      "pregunta": "¿Quién paga el costo del seguro de riesgo laboral a la A.R.T.?", 
+      "opciones": ["El empleador","El trabajador","El empleador y el trabajador juntos"], 
+      "respuesta": "El empleador",
+      "dificultad": "avanzado"
+    },
+    { 
+      "id": 7, 
+      "numero": 4,
+      "pregunta": "¿Todas las empresas pagan lo mismo?", 
+      "opciones": ["Sí, pagan lo mismo por una alícuota fija que marca la ley","No, pagan conforme sus años en la misma actividad","No, pagan conforme su real riesgo y antecedentes"], 
+      "respuesta": "No, pagan conforme su real riesgo y antecedentes",
+      "dificultad": "basico"
+    }
+  ]

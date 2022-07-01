@@ -1,7 +1,7 @@
 import { Box } from '@mui/system'
 import { FormControl, TextField} from '@mui/material'
 import React, { useState } from 'react'
-import { handleCambioDNI, handleCambioEmail } from '../../redux/actions'
+import { handleCambioDNI, handleCambioEmail, handleCambioNombre } from '../../redux/actions'
 import { useDispatch } from 'react-redux'
 
 const TextFieldComp = (props) => {
@@ -16,7 +16,9 @@ const TextFieldComp = (props) => {
         case "DNI":
           dispatch(handleCambioDNI(e.target.value));
           break;
-
+        case "Nombre":
+          dispatch(handleCambioNombre(e.target.value));
+          break;
         case "Email":
           dispatch(handleCambioEmail(e.target.value));
           break;

@@ -1,0 +1,5 @@
+[
+    { "id": "masculino", "name": "Masculino" },
+    { "id": "femenino", "name": "Femenino" },
+    { "id": "nobinario", "name": "No Binario" }
+]

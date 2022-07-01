@@ -5,69 +5,23 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { handleCambioPuntuacion } from '../redux/actions'
+import Preguntas from '../resource/Preguntas.json'
 
 const Pregunta = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const {
-    dificultad,
-    puntuacion
-  } = useSelector(state => state)
+  const { dificultad, puntuacion, categoria } = useSelector(state => state)
   // console.log('puntuacion', puntuacion)
-  // console.log('dificultad', dificultad)
+  console.log('dificultad', dificultad)
+  console.log('categoria', categoria)
 
   const [indexPregunta, setIndexPregunta] = useState(0);
 
-  //#region Preguntas
-  const preguntas = [
-    { 
-      id: 1, 
-      pregunta: "¿Cuántos años hace que está el actual sistema de riesgos de trabajo en Argentina?", 
-      opciones: ["50 años","25 años","15 años"], 
-      respuesta: "50 años" 
-    },
-    { 
-      id: 2, 
-      pregunta: "El sistema de riesgos de trabajo cubre los siniestros que sufren:", 
-      opciones: ["Los trabajadores titulares solamente en relación de dependencia","Los trabajadores y también a su grupo familiar","Los empleadores y los trabajadores"], 
-      respuesta: "Los trabajadores titulares solamente en relación de dependencia" 
-    },
-    { 
-      id: 3, 
-      pregunta: "¿Cuál es la actividad que registra los mayores riesgos laborales?", 
-      opciones: ["Actividad rural","Actividad construcción","Actividad turismo"], 
-      respuesta: "Actividad rural" 
-    },
-    { 
-      id: 4, 
-      pregunta: "¿Cuál es la correcta definición de A.R.T.?", 
-      opciones: ["Asociación de riesgos del trabajo","Aseguradora de riesgos del trabajo","Administradora de riesgos del trabajo"], 
-      respuesta: "Aseguradora de riesgos del trabajo" 
-    },
-    { 
-      id: 5, 
-      pregunta: "¿Qué entidades pueden ser A.R.T.?", 
-      opciones: ["Solo empresas comerciales (SA, SRL, etc)","Solo entidades mutuales (sin fines de lucro)","Empresas comerciales y entidades mutuales"], 
-      respuesta: "Solo empresas comerciales (SA, SRL, etc)" 
-    },
-    { 
-      id: 6, 
-      pregunta: "¿Quién paga el costo del seguro de riesgo laboral a la A.R.T.?", 
-      opciones: ["El empleador","El trabajador","El empleador y el trabajador juntos"], 
-      respuesta: "El empleador" 
-    },
-    { 
-      id: 7, 
-      pregunta: "¿Todas las empresas pagan lo mismo?", 
-      opciones: ["Sí, pagan lo mismo por una alícuota fija que marca la ley","No, pagan conforme sus años en la misma actividad","No, pagan conforme su real riesgo y antecedentes"], 
-      respuesta: "No, pagan conforme su real riesgo y antecedentes" 
-    },
-    // { id: 8, pregunta: "", respuesta: "" },
-    // { id: 9, pregunta: "", respuesta: "" },
-    // { id: 10, pregunta: "", respuesta: "" },
-  ]
-  //#endregion
+  //Filtro preguntas x dificultad
+  const preguntas = Preguntas.filter(pregunta => pregunta.dificultad === dificultad).map((pregunta) => {
+    return pregunta;
+  })
 
   const handleClick = (e) => {
     const pregunta = preguntas[indexPregunta];

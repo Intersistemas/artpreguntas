@@ -3,7 +3,9 @@ import {
     CAMBIAR_PUNTUACION,
     CAMBIAR_DNI,
     CAMBIAR_EMAIL,
-    CAMBIAR_SEXO
+    CAMBIAR_SEXO,
+    CAMBIAR_CATEGORIA,
+    CAMBIAR_NOMBRE
 } from './actionTypes'
 
 export const handleCambioDificultad = (payload) => ({
@@ -28,5 +30,15 @@ export const handleCambioEmail = (payload) => ({
 
 export const handleCambioSexo = (payload) => ({
     type: CAMBIAR_SEXO,
+    payload
+});
+
+export const handleCambioCategoria = (payload) => ({
+    type: CAMBIAR_CATEGORIA,
+    payload
+});
+
+export const handleCambioNombre = (payload) => ({
+    type: CAMBIAR_NOMBRE,
     payload
 });

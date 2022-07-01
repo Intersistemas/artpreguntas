@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { handleCambioPuntuacion } from '../redux/actions'
-import Preguntas from '../resource/Preguntas.json'
+import Preguntas from '../resources/Preguntas.json'
 
 const Pregunta = () => {
   let navigate = useNavigate();

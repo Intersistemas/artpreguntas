@@ -1,47 +1,98 @@
 import { Box } from '@mui/system'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SelectComp from '../components/inputs/SelectComp'
 import { useNavigate } from 'react-router-dom'
 import TextFieldComp from '../components/inputs/TextFieldComp'
-import style from './Inicio.module.css';
-import Typography from '@mui/material/Typography'
-import Dificultad from '../resources/Dificultad.json'
-import Sexo from '../resources/Categoria.json'
+//import Dificultad from '../resources/Dificultad.json'
+//import Sexo from '../resources/Sexo.json'
 import Categoria from '../resources/Categoria.json'
 import ValidarDatosInicio from '../validations/ValidarDatosInicio'
 import { Button } from '@mui/material'
+import { useSelector, useDispatch } from 'react-redux'
+import EnviarCorreo from '../email/EnviarCorreo'
+import { handleLimpiarDatos } from '../redux/actions'
 
 const Inicio = () => {
+    const { nombre, categoria, email, tipoJuego } = useSelector(state => state)
+    const dispatch = useDispatch();
+    const [toSend, setToSend] = useState(null);
     let navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    useEffect(() => {   
+        setToSend({
+            from_name: 'ART Mutual Rural Trivia',
+            to_name: 'Comercial',
+            message: 'Se registró un nuevo jugador',
+            reply_to: '',
+            nombre: nombre,
+            actividad: categoria,
+            email: email
+         })
+    }, [nombre, categoria, email])    
+    
+    const handleSubmit = (e) => {        
+        console.log('toSend', toSend)
         e.preventDefault();
-        navigate('pregunta')          
-    }        
 
-    const opcionesDificultad = Dificultad
-    const opcionesSexo = Sexo
+        if(tipoJuego === 'Trivia')
+        {
+            //EnviarCorreo(toSend)
+        }        
+
+        navigate('/pregunta')          
+    }       
+    
+    const handleVolverMenu = () => {
+      dispatch(handleLimpiarDatos())
+      navigate('/') 
+    }
+
+    //const opcionesDificultad = Dificultad
+    //const opcionesSexo = Sexo
     const opcionesCategoria = Categoria
-    const readyToGo = ValidarDatosInicio()
+    const readyToGo = ValidarDatosInicio(tipoJuego)
 
+    //Campos
+    //console.log('tipoJuego', tipoJuego)
+    let content = null
+    if(tipoJuego === 'Trivia')
+    {
+        content = <>
+            <TextFieldComp label="Nombre" />        
+            <TextFieldComp label="Email" />
+            <SelectComp options={opcionesCategoria} label="Actividad" />
+        </>        
+    }
+
+    if(tipoJuego === 'TriviaKids')
+    {
+        content = <>
+            <TextFieldComp label="Nombre" />        
+        </>        
+    }
+    
   return (
-    <form onSubmit={handleSubmit}>
-        <div className={style.text}>
-          <Typography variant="h2" fontWeight={"bold"} color={'gray'}>ART Trivia</Typography>
-          <Typography variant="h6" fontWeight={"bold"} color={'gray'}>¿Qué sabemos del Riesgos del Trabajo?</Typography>
-        </div>
-        <TextFieldComp label="DNI" />
-        <TextFieldComp label="Nombre" />
-        <SelectComp options={opcionesSexo} label="Sexo" />
-        <TextFieldComp label="Email" />
-        <SelectComp options={opcionesCategoria} label="Categoria" />
-        <SelectComp options={opcionesDificultad} label="Dificultad" />
-        <Box mt={3} width={"100%"}>
-            <Button fullWidth variant="contained" type="submit" disabled={readyToGo}>
-                Comenzar
-            </Button>
-        </Box>
-    </form>
+    <Box sx={{
+        //display: 'flex',  
+        justifyContent: 'center',
+        width: '50%',
+        //marginTop: '2%'
+        marginLeft: 30
+      }}>
+        <form onSubmit={handleSubmit}>     
+            {content}
+            <Box mt={3} width={"100%"}>
+                <Button fullWidth variant="contained" type="submit" disabled={readyToGo}>
+                    Comenzar
+                </Button>            
+            </Box>        
+            <Box mt={1.5} width={"100%"}>            
+                <Button fullWidth variant="contained" onClick={handleVolverMenu}>
+                    Volver al Menú
+                </Button>
+            </Box>
+        </form>
+    </Box>
   )
 }
 

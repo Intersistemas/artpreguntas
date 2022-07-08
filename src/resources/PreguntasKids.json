@@ -1,0 +1,62 @@
+[
+    { 
+      "id": 1,       
+      "pregunta": "Usar casco es obligatorio para los conductores de motos pero no para los acompañantes.", 
+      "opciones": ["Verdadero", "Falso"], 
+      "respuestaCorrecta": 2   
+    },
+    { 
+      "id": 2,       
+      "pregunta": "Debemos abrir la heladera descalzos y/o con las manos mojadas.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 2
+    },
+    { 
+      "id": 3, 
+      "pregunta": "Cuando usamos la patineta es necesario proteger alguna parte del cuerpo.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 1
+    },
+    { 
+      "id": 4, 
+      "pregunta": "Guardar de manera ordenada los utiles y herramientas despues de usarlas ayuda a prevenir accidentes.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 1
+    },
+    { 
+      "id": 5, 
+      "pregunta": "Si el semaforo peatonal me da paso no hace falta mirar a ambos lados al cruzar la calle.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 2
+    },
+    { 
+      "id": 6,
+      "pregunta": "Pararme arriba de los muebles no tiene ningun riesgo.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 2
+    },
+    { 
+      "id": 7,
+      "pregunta": "Si vemos cables colgados o saliendo de algún lugar, debemos avisar a un adulto y no tocarlos.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 1
+    },
+    { 
+      "id": 8,
+      "pregunta": "Mirar son protección la luz de una soldadura daña mucho la vista.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 1
+    },
+    { 
+      "id": 9,
+      "pregunta": "Debemos cruzar la calle por la mitad de la cuadra, corriendo o escuchando música con auriculares", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 2
+    },
+    { 
+      "id": 10,
+      "pregunta": "Si tiene etiqueta, los remedios pueden estar al alcance de los niños.", 
+      "opciones": ["Verdadero", "Falso"],
+      "respuestaCorrecta": 2
+    }
+  ]

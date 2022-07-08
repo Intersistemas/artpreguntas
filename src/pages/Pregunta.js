@@ -6,26 +6,35 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { handleCambioPuntuacion } from '../redux/actions'
 import Preguntas from '../resources/Preguntas.json'
+import PreguntasKids from '../resources/PreguntasKids.json'
+import Imagen from '../components/Imagen'
+
 
 const Pregunta = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { dificultad, puntuacion, categoria } = useSelector(state => state)
-  // console.log('puntuacion', puntuacion)
-  console.log('dificultad', dificultad)
-  console.log('categoria', categoria)
-
+  const { puntuacion, tipoJuego } = useSelector(state => state)
   const [indexPregunta, setIndexPregunta] = useState(0);
 
-  //Filtro preguntas x dificultad
-  const preguntas = Preguntas.filter(pregunta => pregunta.dificultad === dificultad).map((pregunta) => {
-    return pregunta;
-  })
+  let preguntas = [];
+  if (tipoJuego === 'Trivia') {
+    preguntas = Preguntas.map((pregunta) => {
+      return pregunta;
+    })
+  }
+  
+  if (tipoJuego === 'TriviaKids') {
+    preguntas = PreguntasKids.map((pregunta) => {
+      return pregunta;
+    })
+  }
 
   const handleClick = (e) => {
+    console.log('Button resp', e.target.id)
     const pregunta = preguntas[indexPregunta];
-    if(e.target.textContent === pregunta.respuesta) {
+    console.log('pregunta', pregunta)
+    if(+e.target.id === pregunta.respuestaCorrecta) {
       dispatch(handleCambioPuntuacion(puntuacion + 1));
     }
 
@@ -33,8 +42,7 @@ const Pregunta = () => {
       setIndexPregunta(indexPregunta + 1)
     } else {
       navigate('/resultado')
-    }
-      
+    }      
   }
 
   return (
@@ -46,14 +54,18 @@ const Pregunta = () => {
     }}>
       <Typography variant="h3">Pregunta {indexPregunta + 1}</Typography>
       <Typography variant="h5" mt={5}>{preguntas[indexPregunta].pregunta}</Typography>
-      {preguntas[indexPregunta].opciones.map((opcion) => (
-        <Box mt={2} key={opcion}>
-          <Button key={opcion} variant="contained" onClick={handleClick}>{opcion}</Button>
+      <Imagen 
+        imagen={`Kids${indexPregunta + 1}`}         
+      />
+      {preguntas[indexPregunta].opciones.map((opcion, index) => (
+        //console.log('index', index)
+        <Box mt={2} key={index}>
+          <Button id={index+1} key={index} variant="contained" onClick={handleClick}>{opcion}</Button>
         </Box>
       ))}      
       <Box mt={5}>
         <Button>Puntuación: {puntuacion}/{preguntas.length}</Button>
-      </Box>
+      </Box>      
     </Box>
   )
 }

@@ -24,7 +24,7 @@ const SelectComp = (props) => {
                 dispatch(handleCambioSexo(e.target.value));
                 break;
 
-            case "Categoria":
+            case "Actividad":
                 dispatch(handleCambioCategoria(e.target.value));
                 break;
 

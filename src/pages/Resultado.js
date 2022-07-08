@@ -1,28 +1,58 @@
 import { Box } from '@mui/system'
 import { Typography, Button } from '@mui/material'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import LimpiarDatos from '../helpers/LimpiarDatos'
+import { handleLimpiarDatos } from '../redux/actions'
+import Imagen from '../components/Imagen'
 
 const Resultado = () => {  
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { tipoJuego, puntuacion, nombre } = useSelector(state => state)
 
   const handleClick = () => {
-    LimpiarDatos()
+    dispatch(handleLimpiarDatos())
     navigate("/")
   }
 
-  const { puntuacion } = useSelector(state => state)
+  const mensajeFinal = () => {
+    // console.log('tipoJuego', tipoJuego)
+    // console.log('puntuacion', puntuacion)
+    if(tipoJuego === 'Trivia')
+    {
+      if(puntuacion === 7)
+      {
+        return  `Felicidades, ${nombre}! Sos un experto en ART! Reclamá tu premio!`
+      } else {
+        return `¡${nombre}, estuviste muy cerca! ¡Queremos premiarte e invitarte a que nos acompañes en nuestras redes sociales!`
+      }
+    }
+
+    if(tipoJuego === 'TriviaKids')
+    {
+      if(puntuacion === 10)
+      {
+        return `¡Felicitaciones ${nombre}, ganaste!`
+      } else {
+        return `¡${nombre}, estuviste cerca! ¡Casi casi... pss tenemos un premio para vos!!!!`
+      }
+    }
+  }
+  
+
   return (
     <Box sx={{
-      display: 'flex-start',  
-      justifyContent: 'center',
+      //display: 'flex-start',  
+      //justifyContent: 'center',
       width: '100%',
       marginTop: '2%'
     }}>
-      <Typography variant="h5" fontWeight={"bold"} color={'gray'}>Felicidades! Has finalizado la trivia con {puntuacion} respuestas correctas!</Typography>
-      <Button onClick={handleClick} variant="outlined">Volver al inicio</Button>
+      <Typography variant="h3" fontWeight={"bold"} color={'gray'}>{mensajeFinal()}</Typography>
+      <Imagen imagen={`Resultado`} />
+      <Box mt={5}>
+        <Button onClick={handleClick} variant="contained" >Volver al Menu</Button>
+      </Box>        
     </Box>
   )
 }

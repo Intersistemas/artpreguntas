@@ -2,15 +2,29 @@ import { useSelector } from "react-redux"
 import ValidarEmail from "./ValidarEmail"
 
 const ValidarDatosInicio = (props) => {
-    const { dificultad, categoria, email, dni, nombre } = useSelector(state => state)
+    const { categoria, email, nombre } = useSelector(state => state)
 
-    if(dificultad !== "" && categoria !== "" && ValidarEmail(email) && dni !== 0 && nombre !== "")
+    if(props === 'Trivia')
     {
-        return false
-    } else
+        if(categoria !== "" && ValidarEmail(email) && nombre !== "")
+        {
+            return false
+        } else
+        {
+            return true
+        }    
+    } 
+    if(props === 'TriviaKids') 
     {
-        return true
-    }    
+        if(nombre !== "")
+        {
+            return false
+        } else
+        {
+            return true
+        }  
+    }
+    
 }
 
 export default ValidarDatosInicio;

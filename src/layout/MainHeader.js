@@ -13,8 +13,8 @@ const MainHeader = (props) => {
         <div className={style.header}>
             <img className={style.image} src={logo1} alt=""/>
             <div style={{'float': 'right'}}>
-                <Button>  <Link className="nav-color" to="/">Trivia</Link></Button>
-                <Button>  <Link className="nav-color" to="/Mapa">Mapa</Link></Button>
+                <Button>  <Link className="nav-color" to="/">Menu</Link></Button>
+                {/* <Button>  <Link className="nav-color" to="/Mapa">Mapa</Link></Button> */}
             </div>
         </div>
       </header>

@@ -1,4 +1,4 @@
-import { CAMBIAR_CATEGORIA, CAMBIAR_DIFICULTAD, CAMBIAR_DNI, CAMBIAR_EMAIL, CAMBIAR_NOMBRE, CAMBIAR_PUNTUACION, CAMBIAR_SEXO } from "./actionTypes";
+import { CAMBIAR_CATEGORIA, CAMBIAR_DIFICULTAD, CAMBIAR_DNI, CAMBIAR_EMAIL, CAMBIAR_NOMBRE, CAMBIAR_PUNTUACION, CAMBIAR_SEXO, CAMBIAR_TIPOJUEGO, LIMPIAR_DATOS } from "./actionTypes";
 
 const initialState = {
     dni: 0,
@@ -7,7 +7,8 @@ const initialState = {
     sexo: "",
     email: "",
     categoria: "",
-    puntuacion: 0,           
+    puntuacion: 0,
+    tipoJuego: ""
 }
 const reducer = (state = initialState, action) => {
     switch(action.type) {       
@@ -48,11 +49,21 @@ const reducer = (state = initialState, action) => {
             };
 
         case CAMBIAR_PUNTUACION:
-        return {
-            ...state,
-            puntuacion: action.payload
-        };
-           
+            return {
+                ...state,
+                puntuacion: action.payload
+            };
+          
+        case LIMPIAR_DATOS:
+            //console.log('reinicia')
+            return initialState;
+
+        case CAMBIAR_TIPOJUEGO:
+            return {
+                ...state,
+                tipoJuego: action.payload
+            };
+
         default:
             return state;
     }            

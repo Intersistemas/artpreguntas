@@ -5,7 +5,9 @@ import {
     CAMBIAR_EMAIL,
     CAMBIAR_SEXO,
     CAMBIAR_CATEGORIA,
-    CAMBIAR_NOMBRE
+    CAMBIAR_NOMBRE,
+    LIMPIAR_DATOS,
+    CAMBIAR_TIPOJUEGO
 } from './actionTypes'
 
 export const handleCambioDificultad = (payload) => ({
@@ -40,5 +42,15 @@ export const handleCambioCategoria = (payload) => ({
 
 export const handleCambioNombre = (payload) => ({
     type: CAMBIAR_NOMBRE,
-    payload
+    payload    
 });
+
+
+export const handleCambioTipoJuego = (payload) => ({
+    type: CAMBIAR_TIPOJUEGO,
+    payload    
+});
+
+export const handleLimpiarDatos = () => ({
+    type: LIMPIAR_DATOS
+})

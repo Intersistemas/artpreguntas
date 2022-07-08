@@ -1,5 +1,5 @@
 [
-    { "id": "empresarural", "name": "Empresa Rural" },
-    { "id": "trabajadorrural", "name": "Trabajador Rural" },
-    { "id": "otro", "name": "Otro" }
+    { "id": "Publico General", "name": "Público General" },
+    { "id": "Trabajador Rural", "name": "Trabajador Rural" },
+    { "id": "Productor Rural", "name": "Productor Rural" }
 ]

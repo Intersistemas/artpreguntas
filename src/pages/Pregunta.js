@@ -52,7 +52,7 @@ const Pregunta = () => {
   if(tipoJuego === 'Trivia')
   {
     content = <Box sx={{
-      display: 'flex',
+      display: 'grid',
       alignItems: 'center',
       justifyContent: 'center'
     }}>
@@ -79,8 +79,33 @@ const Pregunta = () => {
         display: 'inline-grid',
         marginLeft: 3
       }}>
-        <Button id={1} size="large" variant="contained" onClick={handleClick}>Verdadero</Button>
-        <Button id={2} size="large" variant="contained" onClick={handleClick}>Falso</Button>
+        <Box sx={{
+          marginBottom: 2,
+          height: 100,
+          width: 200
+        }}>
+          <Button sx={{height: "100%"}}
+            id={1} 
+            size="large" 
+            variant="contained" 
+            fullWidth 
+            onClick={handleClick}>Verdadero
+          </Button>
+        </Box>
+        <Box sx={{
+          marginTop: 2,
+          height: 100,
+          width: 200
+        }}>
+          <Button sx={{height: "100%"}}
+            id={2} size="large" 
+            variant="contained" 
+            fullWidth 
+            color={"secondary"}
+            onClick={handleClick}>Falso
+          </Button>
+        </Box>
+        
       </Box>
     </Box>
   }

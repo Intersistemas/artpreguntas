@@ -14,12 +14,12 @@ const CheckBoxComp = () => {
     }
   return (
     <div>
-        <Checkbox 
+        {/* <Checkbox 
             checked={checked}
             onChange={handleCheck}
             inputProps={{ 'aria-label': 'controlled' }}
-        />
-        <Link to="/terminoscondiciones">Acepto los Términos y Condiciones.</Link>  
+        /> */}
+        <Link to="/terminoscondiciones">*Al jugar acepta las Bases y Condiciones.</Link>  
     </div>
           
   )

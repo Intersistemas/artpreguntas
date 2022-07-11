@@ -4,10 +4,10 @@ import ValidarEmail from "./ValidarEmail"
 const ValidarDatosInicio = () => {
     const { categoria, email, nombre, tipoJuego, terminosCondiciones } = useSelector(state => state)
     //console.log('terminosCondiciones', terminosCondiciones)
-    if(terminosCondiciones === false)
-    {
-        return false
-    } 
+    // if(terminosCondiciones === false)
+    // {
+    //     return false
+    // } 
 
     if(tipoJuego === 'Trivia')
     {

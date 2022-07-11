@@ -6,7 +6,6 @@ import Resultado from '../pages/Resultado';
 import Mapa from '../mapa/Mapa';
 import MainHeader from '../layout/MainHeader'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
 import Menu from '../home/Menu';
 import TerminosCondiciones from '../pages/TerminosCondiciones';
 
@@ -18,9 +17,14 @@ const theme = createTheme({
         main: '#83BC00',
         dark: 'green',
         contrastText: '#fff',
-    },
-      secondary: green,
-    },
+      },
+      secondary: {
+        light: '#f8a700',
+        main: '#f8a700',
+        dark: '#ff8c00',
+        contrastText: '#fff',
+      },
+    },    
 });
 
 function App() {  

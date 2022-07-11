@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import CheckBoxComp from '../components/inputs/CheckBoxComp'
 import { handleCambioTipoJuego } from '../redux/actions'
 import styles from './Menu.module.css'
 //import { useSelector, useDispatch } from 'react-redux'
@@ -72,6 +73,7 @@ const Menu = () => {
           </ul>
         </nav>
       </>
+      <CheckBoxComp />
     </Box>
     
   )

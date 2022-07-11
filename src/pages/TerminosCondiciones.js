@@ -6,7 +6,7 @@ const TerminosCondiciones = () => {
     let navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/inicio")
+        navigate("/")
     }
     return (
         <div>

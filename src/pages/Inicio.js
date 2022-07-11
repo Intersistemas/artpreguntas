@@ -15,7 +15,7 @@ import KeyboardComp from '../components/inputs/KeyboardComp'
 import CheckBoxComp from '../components/inputs/CheckBoxComp'
 
 const Inicio = () => {
-    const { nombre, categoria, email, tipoJuego, terminosCondiciones } = useSelector(state => state)
+    const { nombre, categoria, email, tipoJuego } = useSelector(state => state)
     const dispatch = useDispatch();
     const keyboardRef = useRef(null);
         
@@ -32,13 +32,13 @@ const Inicio = () => {
             actividad: categoria,
             email: email
          })
-    }, [nombre, categoria, email])    
+    }, [nombre, categoria, email])          
     
     const handleSubmit = (e) => {        
         console.log('toSend', toSend)
         e.preventDefault();
 
-        if(email !== "")
+        if(email !== "" && process.env.NODE_ENV === "production")
         {
             EnviarCorreo(toSend)
         }        
@@ -89,8 +89,7 @@ const Inicio = () => {
         marginLeft: 30
       }}>
         <form onSubmit={handleSubmit}>     
-            {content}
-            <CheckBoxComp />            
+            {content}                        
             <Box mt={3} width={"100%"}>
                 <Button fullWidth variant="contained" type="submit" disabled={!readyToGo}>
                     Comenzar

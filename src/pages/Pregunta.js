@@ -17,6 +17,7 @@ const Pregunta = () => {
   const { puntuacion, tipoJuego } = useSelector(state => state)
   const [indexPregunta, setIndexPregunta] = useState(0);
 
+  //#region Preguntas
   let preguntas = [];
   if (tipoJuego === 'Trivia') {
     preguntas = Preguntas.map((pregunta) => {
@@ -29,6 +30,7 @@ const Pregunta = () => {
       return pregunta;
     })
   }
+  //#endregion
 
   const handleClick = (e) => {
     console.log('Button resp', e.target.id)
@@ -45,24 +47,51 @@ const Pregunta = () => {
     }      
   }
 
-  return (
-    <Box sx={{
-      //display: 'flex',  
-      //justifyContent: 'center',
-      width: '100%',
-      //marginTop: '2%'
+  //#region contenido
+  let content = null
+  if(tipoJuego === 'Trivia')
+  {
+    content = <Box sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     }}>
-      <Typography variant="h3">Pregunta {indexPregunta + 1}</Typography>
-      <Typography variant="h5" mt={5}>{preguntas[indexPregunta].pregunta}</Typography>
-      <Imagen 
-        imagen={`Kids${indexPregunta + 1}`}         
-      />
       {preguntas[indexPregunta].opciones.map((opcion, index) => (
         //console.log('index', index)
         <Box mt={2} key={index}>
           <Button id={index+1} key={index} variant="contained" onClick={handleClick}>{opcion}</Button>
         </Box>
-      ))}      
+      ))}
+    </Box> 
+  }
+
+  if(tipoJuego === 'TriviaKids')
+  {
+    content = <Box sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
+      <div>
+        <Imagen imagen={`Kids${indexPregunta + 1}`} />
+      </div>
+      <Box sx={{
+        display: 'inline-grid',
+        marginLeft: 3
+      }}>
+        <Button id={1} size="large" variant="contained" onClick={handleClick}>Verdadero</Button>
+        <Button id={2} size="large" variant="contained" onClick={handleClick}>Falso</Button>
+      </Box>
+    </Box>
+  }
+
+  return (
+    <Box sx={{
+      width: '100%',
+    }}>
+      <Typography variant="h3">Pregunta {indexPregunta + 1}</Typography>
+      <Typography variant="h5" mt={5}>{preguntas[indexPregunta].pregunta}</Typography>  
+      {content}
       <Box mt={5}>
         <Button>Puntuación: {puntuacion}/{preguntas.length}</Button>
       </Box>      

@@ -1,8 +1,8 @@
 import { Box } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import SelectComp from '../components/inputs/SelectComp'
 import { useNavigate } from 'react-router-dom'
-import TextFieldComp from '../components/inputs/TextFieldComp'
+//import TextFieldComp from '../components/inputs/TextFieldComp'
 //import Dificultad from '../resources/Dificultad.json'
 //import Sexo from '../resources/Sexo.json'
 import Categoria from '../resources/Categoria.json'
@@ -11,10 +11,14 @@ import { Button } from '@mui/material'
 import { useSelector, useDispatch } from 'react-redux'
 import EnviarCorreo from '../email/EnviarCorreo'
 import { handleLimpiarDatos } from '../redux/actions'
+import KeyboardComp from '../components/inputs/KeyboardComp'
+import CheckBoxComp from '../components/inputs/CheckBoxComp'
 
 const Inicio = () => {
-    const { nombre, categoria, email, tipoJuego } = useSelector(state => state)
+    const { nombre, categoria, email, tipoJuego, terminosCondiciones } = useSelector(state => state)
     const dispatch = useDispatch();
+    const keyboardRef = useRef(null);
+        
     const [toSend, setToSend] = useState(null);
     let navigate = useNavigate();
 
@@ -34,9 +38,9 @@ const Inicio = () => {
         console.log('toSend', toSend)
         e.preventDefault();
 
-        if(tipoJuego === 'Trivia')
+        if(email !== "")
         {
-            //EnviarCorreo(toSend)
+            EnviarCorreo(toSend)
         }        
 
         navigate('/pregunta')          
@@ -58,16 +62,21 @@ const Inicio = () => {
     if(tipoJuego === 'Trivia')
     {
         content = <>
-            <TextFieldComp label="Nombre" />        
-            <TextFieldComp label="Email" />
-            <SelectComp options={opcionesCategoria} label="Actividad" />
+            <KeyboardComp
+                keyboardRef={keyboardRef}
+                inputNames={["Nombre", "Email"]}
+            />
+            <SelectComp options={opcionesCategoria} label="Actividad" />            
         </>        
     }
 
     if(tipoJuego === 'TriviaKids')
     {
         content = <>
-            <TextFieldComp label="Nombre" />        
+            <KeyboardComp
+                keyboardRef={keyboardRef}
+                inputNames={["Nombre"]}
+            />
         </>        
     }
     
@@ -81,14 +90,15 @@ const Inicio = () => {
       }}>
         <form onSubmit={handleSubmit}>     
             {content}
+            <CheckBoxComp />            
             <Box mt={3} width={"100%"}>
-                <Button fullWidth variant="contained" type="submit" disabled={readyToGo}>
+                <Button fullWidth variant="contained" type="submit" disabled={!readyToGo}>
                     Comenzar
                 </Button>            
             </Box>        
             <Box mt={1.5} width={"100%"}>            
                 <Button fullWidth variant="contained" onClick={handleVolverMenu}>
-                    Volver al Menú
+                    Volver al Menu
                 </Button>
             </Box>
         </form>

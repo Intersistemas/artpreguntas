@@ -8,7 +8,7 @@ import MainHeader from '../layout/MainHeader'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
 import Menu from '../home/Menu';
-import InicioKids from '../pages/InicioKids';
+import TerminosCondiciones from '../pages/TerminosCondiciones';
 
 
 const theme = createTheme({
@@ -33,10 +33,10 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Menu />}/>          
             <Route exact path="/inicio" element={<Inicio />}/> 
-            {/* <Route exact path="/InicioKids" element={<InicioKids />}/>  */}
             <Route exact path="/pregunta" element={<Pregunta />}/> 
             <Route path="/resultado" element={<Resultado />} />
             <Route path="/Mapa" element={<Mapa />} />
+            <Route path="/terminoscondiciones" element={<TerminosCondiciones />} />
           </Routes>
         </Box>
       </Container>   

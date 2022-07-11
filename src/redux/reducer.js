@@ -1,23 +1,18 @@
-import { CAMBIAR_CATEGORIA, CAMBIAR_DIFICULTAD, CAMBIAR_DNI, CAMBIAR_EMAIL, CAMBIAR_NOMBRE, CAMBIAR_PUNTUACION, CAMBIAR_SEXO, CAMBIAR_TIPOJUEGO, LIMPIAR_DATOS } from "./actionTypes";
+import { CAMBIAR_CATEGORIA, CAMBIAR_DIFICULTAD, CAMBIAR_EMAIL, CAMBIAR_KEYBOARD, CAMBIAR_NOMBRE, CAMBIAR_PUNTUACION, CAMBIAR_SEXO, CAMBIAR_TERMINOSCONDICIONES, CAMBIAR_TIPOJUEGO, LIMPIAR_DATOS } from "./actionTypes";
 
 const initialState = {
-    dni: 0,
     nombre: "",
     dificultad: "",
     sexo: "",
     email: "",
     categoria: "",
     puntuacion: 0,
-    tipoJuego: ""
+    tipoJuego: "",
+    keyboardSelected: "",
+    terminosCondiciones: false
 }
 const reducer = (state = initialState, action) => {
-    switch(action.type) {       
-        case CAMBIAR_DNI:
-            return {
-                ...state,
-                dni: action.payload
-            };
-
+    switch(action.type) {               
         case CAMBIAR_NOMBRE:
             return {
                 ...state,
@@ -63,6 +58,18 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 tipoJuego: action.payload
             };
+
+        case CAMBIAR_KEYBOARD:
+            return {
+                ...state,
+                keyboard: action.payload
+            }
+
+        case CAMBIAR_TERMINOSCONDICIONES:
+            return {
+                ...state,
+                terminosCondiciones: action.payload
+            }
 
         default:
             return state;

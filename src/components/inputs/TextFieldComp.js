@@ -1,25 +1,23 @@
 import { Box } from '@mui/system'
 import { FormControl, TextField} from '@mui/material'
 import React, { useState } from 'react'
-import { handleCambioDNI, handleCambioEmail, handleCambioNombre } from '../../redux/actions'
+import { handleCambioEmail, handleCambioNombre } from '../../redux/actions'
 import { useDispatch } from 'react-redux'
+import "react-simple-keyboard/build/css/index.css";
+
+import "./TextFieldComp.module.css";
+
 
 const TextFieldComp = (props) => {
     const { label } = props;
-    const dispatch = useDispatch();
-    const [value, setValue] = useState('');
+    
+    //hooks
+    const dispatch = useDispatch();    
 
-    const handleChange = (event) => {      
-      switch(label) {
-        case "DNI":
-          const re = /^[0-9\b]+$/;
-          if(event.target.value === '' || re.test(event.target.value)) {
-            dispatch(handleCambioDNI(+event.target.value));
-          } else {
-            return
-          }          
-          break;
-
+    const [input, setInput] = useState(""); 
+    
+    const onChangeInput = event => {
+      switch(label) {        
         case "Nombre":
           dispatch(handleCambioNombre(event.target.value));
           break;
@@ -32,8 +30,9 @@ const TextFieldComp = (props) => {
           break;
       }
 
-      setValue(event.target.value)
-    }
+      const input = event.target.value;
+      setInput(input)    
+  };
     
   return (
     <Box sx={{
@@ -42,14 +41,16 @@ const TextFieldComp = (props) => {
       width: '100%',
       marginTop: '2%'
     }}>
-        <FormControl fullWidth size='small'>
-            <TextField
-                value={value}
-                onChange={handleChange}
-                variant="outlined"
-                label={label}
-                size="small"
-            />
+        <FormControl fullWidth size='small'>        
+          <TextField
+              id={label}
+              value={input}              
+              onChange={onChangeInput}
+              placeholder={"Ingrese " + label}
+              variant="outlined"
+              label={label}
+              size="small"
+          />                    
         </FormControl>
     </Box>
   )

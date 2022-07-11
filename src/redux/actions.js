@@ -1,13 +1,14 @@
 import { 
     CAMBIAR_DIFICULTAD, 
     CAMBIAR_PUNTUACION,
-    CAMBIAR_DNI,
     CAMBIAR_EMAIL,
     CAMBIAR_SEXO,
     CAMBIAR_CATEGORIA,
     CAMBIAR_NOMBRE,
     LIMPIAR_DATOS,
-    CAMBIAR_TIPOJUEGO
+    CAMBIAR_TIPOJUEGO,
+    CAMBIAR_KEYBOARD,
+    CAMBIAR_TERMINOSCONDICIONES
 } from './actionTypes'
 
 export const handleCambioDificultad = (payload) => ({
@@ -17,11 +18,6 @@ export const handleCambioDificultad = (payload) => ({
 
 export const handleCambioPuntuacion = (payload) => ({
     type: CAMBIAR_PUNTUACION,
-    payload
-});
-
-export const handleCambioDNI = (payload) => ({
-    type: CAMBIAR_DNI,
     payload
 });
 
@@ -54,3 +50,13 @@ export const handleCambioTipoJuego = (payload) => ({
 export const handleLimpiarDatos = () => ({
     type: LIMPIAR_DATOS
 })
+
+export const handleCambioKeyboard = (payload) => ({
+    type: CAMBIAR_KEYBOARD,
+    payload
+})
+
+export const handleCambioTerminosCondiciones = (payload) => ({
+    type: CAMBIAR_TERMINOSCONDICIONES,
+    payload
+}) 

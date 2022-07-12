@@ -602,7 +602,7 @@ export const Data = [
           ],
     },
     {
-    provincia: "SANTA FÉ",
+    provincia: "SANTA FE",
     actividades: [
               {
                 actividad: "CRIA DE GANADO BOVINO",

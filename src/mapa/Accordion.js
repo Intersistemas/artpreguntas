@@ -88,7 +88,7 @@ const Accordion = (props) => {
                   <span>{clicked === index ? <FiMinus style={{ color: 'orange'}} /> : <FiPlus style={{ color: 'orange'}} />}</span>
                 </Wrap>
                 {clicked === index ? (
-                  <Dropdown>
+                  <Dropdown key={index}>
                    Trabajadores Cubiertos:  {item.antNom}<br/>
                    Siniestros Registrados: {item.siniestros}<br/>
                   

@@ -52,17 +52,17 @@ const Menu = () => {
             </li>
             <li>
               <NavLink 
-                to="Mapa1"
+                to="Mapa"
                 style={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }
               >
-                <button className={styles.button} >ART Mapa 1</button>
+                <button className={styles.button} >ART Mapa</button>
               </NavLink>
             </li>
             <li>
               <NavLink 
-                to="Mapa2"
+                to="Mapa"
                 style={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }

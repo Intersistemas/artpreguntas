@@ -70,7 +70,8 @@ const Pregunta = () => {
     content = <Box sx={{
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      marginTop: 3
     }}>
       <div>
         <Imagen imagen={`Kids${indexPregunta + 1}`} />

@@ -1,7 +1,8 @@
 const Imagen = (props) => {
-    console.log('props', props)
-    return <img 
-        src={require(`../media/${props.imagen}.png`)} 
+    //console.log('props', props)
+    let imagen = props.imagen === 'Resultado' ? require(`../media/Thank.gif`) : require(`../media/${props.imagen}.png`)
+    return <img
+        src={(imagen)} 
         alt="Logo" 
         heigth={500}
         width={500}

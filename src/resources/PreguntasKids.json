@@ -43,7 +43,7 @@
     },
     { 
       "id": 8,
-      "pregunta": "Mirar son protección la luz de una soldadura daña mucho la vista.", 
+      "pregunta": "Mirar sin protección la luz de una soldadura daña mucho la vista.", 
       "opciones": ["Verdadero", "Falso"],
       "respuestaCorrecta": 1
     },

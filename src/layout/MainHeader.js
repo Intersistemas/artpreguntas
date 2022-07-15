@@ -11,10 +11,7 @@ const MainHeader = (props) => {
     <div>
       <header className='header'> 
         <div className={style.header}>
-            <img className={style.image} src={logo1} alt=""/>
-            {/* <div style={{'float': 'right'}}>
-                <Button>  <Link className="nav-color" to="/">Menu</Link></Button>
-            </div> */}
+            <img className={style.image} src={logo1} alt="logo" height={100}/>
         </div>
       </header>
     </div>

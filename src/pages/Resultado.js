@@ -46,11 +46,11 @@ const Resultado = () => {
       //display: 'flex-start',  
       //justifyContent: 'center',
       width: '100%',
-      marginTop: '2%'
+      marginTop: 1
     }}>
-      <Typography variant="h3" fontWeight={"bold"} color={'gray'}>{mensajeFinal()}</Typography>
+      <Typography variant="h4" fontWeight={"bold"} color={'gray'}>{mensajeFinal()}</Typography>
       <Imagen imagen={`Resultado`} />
-      <Box mt={5}>
+      <Box mt={1}>
         <Button onClick={handleClick} variant="contained" >Volver al Menu</Button>
       </Box>        
     </Box>

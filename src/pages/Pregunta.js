@@ -71,7 +71,7 @@ const Pregunta = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 3
+      marginTop: 2
     }}>
       <div>
         <Imagen imagen={`Kids${indexPregunta + 1}`} />
@@ -116,9 +116,9 @@ const Pregunta = () => {
       width: '100%',
     }}>
       <Typography variant="h3">Pregunta {indexPregunta + 1}</Typography>
-      <Typography variant="h5" mt={5}>{preguntas[indexPregunta].pregunta}</Typography>  
+      <Typography variant="h5" mt={2}>{preguntas[indexPregunta].pregunta}</Typography>  
       {content}
-      <Box mt={5}>
+      <Box mt={1}>
         <Button>Puntuación: {puntuacion}/{preguntas.length}</Button>
       </Box>      
     </Box>

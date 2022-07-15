@@ -67,7 +67,7 @@ const Menu = () => {
                   isActive ? activeStyle : undefined
                 }
               >
-                <button className={styles.button} >ART Mapa 2</button>
+                <button className={styles.button} >ART Mapa Kids</button>
               </NavLink>
             </li>
           </ul>

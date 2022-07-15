@@ -53,7 +53,8 @@ export class Mapa extends Component {
             <div>
                 <div id="Mapa" className="seccion">
                     <Typography variant="h4" fontWeight={"bold"} color={'gray'}>Actividades por Provincia</Typography>
-                    <div id="Provincias" style={{position: 'absolute',margin: '0% -14%'}}>  
+                    {/* <div id="Provincias" style={{position: 'absolute',margin: '0% -14%'}}>   */}
+                    <div id="Provincias" style={{position: 'absolute',margin: '0%'}}>
                         <div id="Descripcion" style={{margin: '-15%'}}>Haga click en cualquier provincia</div>                                  
                         <div id="Jujuy" className="ar-pcia ar-jujuy" title="Jujuy" onClick={() => this.funcion2("JUJUY")}><span></span></div>
                         <div id="Salta" className="ar-pcia ar-salta" title="Salta" onClick={() => this.funcion2("SALTA")}><span></span></div>

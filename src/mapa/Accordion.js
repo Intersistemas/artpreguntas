@@ -28,7 +28,6 @@ const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
   text-align: center;
   cursor: pointer;
   border-bottom: 2px solid #f8a700;
@@ -56,9 +55,6 @@ const Dropdown = styled.div`
   display: inherit;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: larger;
-  
-
 
   p {
     font-size: 2rem;

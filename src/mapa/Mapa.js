@@ -4,21 +4,23 @@ import './estilos.css';
 import Typography from '@mui/material/Typography';
 import Accordion from './Accordion';
 import { Data } from './Data';    
-
-
+import { Box } from '@mui/material';
 export class Mapa extends Component {
    
     componentDidMount() {
-        window.scrollTo(0, 0)
+        //window.scrollTo(0, 0)
     }
     
     componentDidUpdate(){
-        window.scrollTo(0, 0)
+        //window.scrollTo(0, 0)
     }
+    
     
     constructor(props) {
         super(props)
         
+        const { innerWidth: width, innerHeight: height } = window;
+
         // Create the ref
         this.title = React.createRef();
         this.state = {
@@ -50,9 +52,11 @@ export class Mapa extends Component {
           };
 
         return (
-            <div>
-                <div id="Mapa" className="seccion">
-                    <div id="Provincias" style={{position: 'absolute',margin: '6% -6%'}}>  
+            <Box sx={{
+                justifyContent: 'center',
+                width: ((this.width !== 800 && this.height !== 1200) && (this.width !== 1200 && this.height !== 800)) ? '100%' : '80%',
+              }}>
+                    <div id="Provincias" style={{position: 'absolute',margin: '6% 0%'}}>  
                         <div id="Descripcion" style={{margin: '-15%'}}>Haga click en cualquier provincia</div>                                  
                         <div id="Jujuy" className="ar-pcia ar-jujuy" title="Jujuy" onClick={() => this.funcion2("JUJUY")}><span></span></div>
                         <div id="Salta" className="ar-pcia ar-salta" title="Salta" onClick={() => this.funcion2("SALTA")}><span></span></div>
@@ -88,8 +92,7 @@ export class Mapa extends Component {
                         <h1 style={{ color: 'orange',  fontFamily: 'sans-serif', fontSize: 'xxx-large'}}>{this.state.prov}</h1>
                         <Accordion Prov={this.state.prov} Actividades={this.state.actividades}/> 
                     </div>
-                </div>                
-            </div>            
+            </Box>          
         )
     }
 }

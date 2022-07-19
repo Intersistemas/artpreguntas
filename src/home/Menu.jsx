@@ -62,7 +62,7 @@ const Menu = () => {
             </li>
             <li>
               <NavLink 
-                to="Mapa"
+                to="MapaKids"
                 style={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }

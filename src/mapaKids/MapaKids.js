@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 //import YouTube from 'react-youtube';
-import './estilos.css';
+import './estilosKids.css';
 import Typography from '@mui/material/Typography';
-import Accordion from './Accordion';
-import { Data } from './Data';    
+import Accordion from './AccordionKids';
+import { Data } from './DataKids';    
 import { Box } from '@mui/material';
 import { Button } from '@mui/material'
 import { Link } from "react-router-dom";
 
-export class Mapa extends Component {
+export class MapaKids extends Component {
    
     componentDidMount() {
         //window.scrollTo(0, 0)
@@ -64,7 +64,7 @@ export class Mapa extends Component {
                         <Box style={{ width: 'auto', 'text-align': 'right'}}> 
                             <Link to="/"> 
                                 <Button variant="contained">
-                                    Volver al Menu 
+                                    Volver al Menu... 
                                 </Button>       
                             </Link>   
                         </Box>
@@ -114,4 +114,4 @@ export class Mapa extends Component {
     }
 }
 
-export default Mapa
+export default MapaKids

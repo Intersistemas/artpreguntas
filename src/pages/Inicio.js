@@ -12,10 +12,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import EnviarCorreo from '../email/EnviarCorreo'
 import { handleLimpiarDatos } from '../redux/actions'
 import KeyboardComp from '../components/inputs/KeyboardComp'
-import CheckBoxComp from '../components/inputs/CheckBoxComp'
+import useDimensionPantalla from '../hooks/DimensionPantalla'
+//import CheckBoxComp from '../components/inputs/CheckBoxComp'
 
 const Inicio = () => {
     const { nombre, categoria, email, tipoJuego } = useSelector(state => state)
+    const { width } = useDimensionPantalla();
+    //console.log('width', width)
     const dispatch = useDispatch();
     const keyboardRef = useRef(null);
         
@@ -84,9 +87,9 @@ const Inicio = () => {
     <Box sx={{
         //display: 'flex',  
         justifyContent: 'center',
-        width: '50%',
+        width: width > 1280 ? '60%' : '80%',
         //marginTop: '2%'
-        marginLeft: 30
+        //marginLeft: 30
       }}>
         <form onSubmit={handleSubmit}>     
             {content}                        

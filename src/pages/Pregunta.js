@@ -13,7 +13,7 @@ import Imagen from '../components/Imagen'
 const Pregunta = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
-
+  
   const { puntuacion, tipoJuego } = useSelector(state => state)
   const [indexPregunta, setIndexPregunta] = useState(0);
 

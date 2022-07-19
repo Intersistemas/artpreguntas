@@ -17,7 +17,7 @@ import useDimensionPantalla from '../hooks/DimensionPantalla'
 
 const Inicio = () => {
     const { nombre, categoria, email, tipoJuego } = useSelector(state => state)
-    const { width } = useDimensionPantalla();
+    const { width, height } = useDimensionPantalla();
     //console.log('width', width)
     const dispatch = useDispatch();
     const keyboardRef = useRef(null);
@@ -35,7 +35,7 @@ const Inicio = () => {
             actividad: categoria,
             email: email
          })
-    }, [nombre, categoria, email])          
+    }, [nombre, categoria, email])    
     
     const handleSubmit = (e) => {        
         console.log('toSend', toSend)
@@ -46,7 +46,7 @@ const Inicio = () => {
             EnviarCorreo(toSend)
         }        
 
-        navigate('/pregunta')          
+        navigate('/pregunta', {replace: true})          
     }       
     
     const handleVolverMenu = () => {
@@ -87,12 +87,13 @@ const Inicio = () => {
     <Box sx={{
         //display: 'flex',  
         justifyContent: 'center',
-        width: width > 1280 ? '60%' : '80%',
+        width: ((width !== 800 && height !== 1200) && (width !== 1200 && height !== 800)) ? '60%' : '80%',
         //marginTop: '2%'
         //marginLeft: 30
       }}>
         <form onSubmit={handleSubmit}>     
-            {content}                        
+            {content}  
+            {/* <p>Pantalla: {width} - {height}</p>                       */}
             <Box mt={3} width={"100%"}>
                 <Button fullWidth variant="contained" type="submit" disabled={!readyToGo}>
                     Comenzar

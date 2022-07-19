@@ -7,7 +7,7 @@ import { handleCambioEmail, handleCambioNombre } from "../../redux/actions";
 
 const KeyboardComp = props => {
   const { keyboardRef: keyboard, inputNames = ["default"] } = props;
-  const { width } = useDimensionPantalla();
+  const { width, height } = useDimensionPantalla();
   
   const dispatch = useDispatch();  
 
@@ -57,7 +57,7 @@ const KeyboardComp = props => {
       [inputName]: inputVal
     });
 
-    if(width > 1280)
+    if((width !== 800 && height !== 1200) && (width !== 1200 && height !== 800))
     {
       keyboard.current.setInput(inputVal);
     }
@@ -112,7 +112,7 @@ const KeyboardComp = props => {
           </FormControl>
         </Box>
       ))}
-      {width > 1280 && <Keyboard {...keyboardProps} />}      
+      {((width !== 800 && height !== 1200) && (width !== 1200 && height !== 800)) && <Keyboard {...keyboardProps} />}      
     </Box>
   );
 };

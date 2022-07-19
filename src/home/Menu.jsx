@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import CheckBoxComp from '../components/inputs/CheckBoxComp'
-import { handleCambioTipoJuego } from '../redux/actions'
+import { handleCambioTipoJuego, handleLimpiarDatos } from '../redux/actions'
 import styles from './Menu.module.css'
 //import { useSelector, useDispatch } from 'react-redux'
 
@@ -21,12 +21,17 @@ const Menu = () => {
     dispatch(handleCambioTipoJuego(e.target.id))
   }
 
+  //siempre al renderizar limpio el store
+  useEffect(() => {   
+    dispatch(handleLimpiarDatos())
+  }, [dispatch]) 
+
   return (
     <Box sx={{
-      textAlign: "center",      
+      textAlign: "center",
     }}>
-      <Typography variant="h2" gutterBottom component="div">¡Bienvenido a los juegos de la ART Mutual Rural!</Typography>
-      <Typography variant="h4" gutterBottom component="div">¿Estás listo? Comencemos... Seleccioná una opción</Typography>                    
+      <Typography variant="h3" gutterBottom component="div">¡Bienvenido a los juegos de la ART Mutual Rural!</Typography>
+      <Typography variant="h5" gutterBottom component="div">¿Estás listo? Comencemos... Seleccioná una opción</Typography>                    
       <>
         <nav className={styles.nav}>
           <ul>

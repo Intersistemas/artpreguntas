@@ -23,7 +23,7 @@ export class Mapa extends Component {
         this.title = React.createRef();
         this.state = {
 
-            prov: {},
+            prov: String,
             actividades:[]
             }
       }
@@ -52,9 +52,7 @@ export class Mapa extends Component {
         return (
             <div>
                 <div id="Mapa" className="seccion">
-                    <Typography variant="h4" fontWeight={"bold"} color={'gray'}>Actividades por Provincia</Typography>
-                    {/* <div id="Provincias" style={{position: 'absolute',margin: '0% -14%'}}>   */}
-                    <div id="Provincias" style={{position: 'absolute',margin: '0%'}}>
+                    <div id="Provincias" style={{position: 'absolute',margin: '6% -6%'}}>  
                         <div id="Descripcion" style={{margin: '-15%'}}>Haga click en cualquier provincia</div>                                  
                         <div id="Jujuy" className="ar-pcia ar-jujuy" title="Jujuy" onClick={() => this.funcion2("JUJUY")}><span></span></div>
                         <div id="Salta" className="ar-pcia ar-salta" title="Salta" onClick={() => this.funcion2("SALTA")}><span></span></div>
@@ -64,7 +62,7 @@ export class Mapa extends Component {
                         <div id="Stgo" className="ar-pcia ar-santiago-del-estero" title="Stgo. Estero" onClick={() => this.funcion2("SANTIAGO DEL ESTERO")}><span></span></div>
                         <div id="Chaco" className="ar-pcia ar-chaco" title="Chaco" onClick={() => this.funcion2("CHACO")}><span></span></div>
                         <div id="Corrientes" className="ar-pcia ar-corrientes" title="Corrientes" onClick={() => this.funcion2("CORRIENTES")}><span></span></div>
-                        <div id="Misiones" className="ar-pcia ar-misiones" title="Misiones" onClick={() => this.funcion2("POSADAS")}><span></span></div>
+                        <div id="Misiones" className="ar-pcia ar-misiones" title="Misiones" onClick={() => this.funcion2("MISIONES")}><span></span></div>
                         <div id="LaRioja" className="ar-pcia ar-la-rioja" title="La Rioja" onClick={() => this.funcion2("LA RIOJA")}><span></span></div>
                         <div id="Cordoba" className="ar-pcia ar-cordoba" title="Córdoba" onClick={() => this.funcion2("CORDOBA")}><span></span></div>
                         <div id="StaFe" className="ar-pcia ar-santa-fe" title="Sta. Fe" onClick={() => this.funcion2("SANTA FE")}><span></span></div>
@@ -82,16 +80,14 @@ export class Mapa extends Component {
                         <div id="Tierra" className="ar-pcia ar-tierra-del-fuego" title="Tierra Del Fuego" onClick={() => this.funcion2("TIERRA DEL FUEGO")}><span></span></div>
                         <div id="Malvinas" className="ar-pcia ar-malvinas" title="Malvinas" onClick={() =>  this.funcion2("TIERRA DEL FUEGO")}><span></span></div>
                     </div>
-                  
+                    <div  style={{float: 'right', 'width': '70%'}}>
                     {/*<Typography variant="h5" fontWeight={"bold"}> {this.state.loc}</Typography>
                     <Typography  variant="h6"> {this.state.dir}</Typography>
                      */}
-                    <h1 style={{ color: 'orange'}}> {JSON.stringify(this.state.prov)}</h1>
-                {console.log('state prov mapa: ',this.state.prov)}
-                     {console.log('state activ mapa: ',this.state.actividades)}
-                    <Accordion Prov={this.state.prov} Actividades={this.state.actividades}/> 
-
-
+                        <Typography variant="h4" fontWeight={"bold"} color={'gray'}>Actividades por Provincia</Typography>
+                        <h1 style={{ color: 'orange',  fontFamily: 'sans-serif', fontSize: 'xxx-large'}}>{this.state.prov}</h1>
+                        <Accordion Prov={this.state.prov} Actividades={this.state.actividades}/> 
+                    </div>
                 </div>                
             </div>            
         )

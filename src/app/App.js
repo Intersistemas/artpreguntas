@@ -33,7 +33,7 @@ function App() {
     <Router>
       <MainHeader />
       <Container maxWidth="lg">
-        <Box textAlign={"center"} mt={3} width={"100%"}>        
+        <Box textAlign={"center"} mt={3} width={"100%"} justifyContent={"center"} display={"flex"}>        
           <Routes>
             <Route exact path="/" element={<Menu />}/>          
             <Route exact path="/inicio" element={<Inicio />}/> 

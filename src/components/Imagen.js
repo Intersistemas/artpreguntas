@@ -4,8 +4,8 @@ const Imagen = (props) => {
     return <img
         src={(imagen)} 
         alt="Logo" 
-        heigth={500}
-        width={500}
+        heigth={400}
+        width={400}
     />;
 }
 

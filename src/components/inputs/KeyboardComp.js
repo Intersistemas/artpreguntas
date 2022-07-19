@@ -2,10 +2,13 @@ import { Box, FormControl, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Keyboard from "react-simple-keyboard";
+import useDimensionPantalla from "../../hooks/DimensionPantalla";
 import { handleCambioEmail, handleCambioNombre } from "../../redux/actions";
 
 const KeyboardComp = props => {
   const { keyboardRef: keyboard, inputNames = ["default"] } = props;
+  const { width } = useDimensionPantalla();
+  
   const dispatch = useDispatch();  
 
   const [inputs, setInputs] = useState({});
@@ -54,7 +57,11 @@ const KeyboardComp = props => {
       [inputName]: inputVal
     });
 
-    keyboard.current.setInput(inputVal);
+    if(width > 1280)
+    {
+      keyboard.current.setInput(inputVal);
+    }
+    
   };
 
   const handleShift = () => {
@@ -84,7 +91,7 @@ const KeyboardComp = props => {
   };
 
   return (
-    <div>
+    <Box>
       {inputNames.map(input => (
         <Box key={input} sx={{
           display: 'flex',  
@@ -105,9 +112,8 @@ const KeyboardComp = props => {
           </FormControl>
         </Box>
       ))}
-      
-      <Keyboard {...keyboardProps} />
-    </div>
+      {width > 1280 && <Keyboard {...keyboardProps} />}      
+    </Box>
   );
 };
 

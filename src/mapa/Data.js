@@ -102,7 +102,7 @@ export const Data = [
                 indMortalidad: 0
                 },
           {
-                actividad: " CRIA DE GANADO CAPRINO-EXCEPTO LA REALIZADA EN CABAÑAS Y PARA LA PRODUCCIONDE PELOS Y DE LECHE",
+                actividad: "CRIA DE GANADO CAPRINO-EXCEPTO LA REALIZADA EN CABAÑAS Y PARA LA PRODUCCIONDE PELOS Y DE LECHE",
                 ciiu: 14430,
                 antNom: 5,
                 siniestros: 2,
@@ -275,7 +275,7 @@ export const Data = [
     provincia: "FORMOSA",
       actividades: [
         {
-                actividad: " CRIA DE GANADO CAPRINO-EXCEPTO LA REALIZADA EN CABAÑAS Y PARA LA PRODUCCIONDE PELOS Y DE LECHE",
+                actividad: "CRIA DE GANADO CAPRINO-EXCEPTO LA REALIZADA EN CABAÑAS Y PARA LA PRODUCCIONDE PELOS Y DE LECHE",
                 ciiu: 14430,
                 antNom: 5,
                 siniestros: 0,
@@ -363,7 +363,7 @@ export const Data = [
                 indMortalidad: 0
                 },
                 {
-                actividad: " CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
+                actividad: "CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
                 ciiu: 11329,
                 antNom: 2359,
                 siniestros: 153,

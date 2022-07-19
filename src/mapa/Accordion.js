@@ -11,13 +11,15 @@ const AccordionSection = styled.div`
   justify-content: center;
   position: relative;
   height: 1vh;
-  background: #f8a700;
+  //background: #f8a700;
+  font-family: sans-serif;
 `;
 
 const Container = styled.div`
   position: absolute;
   top: 30%;
   box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+  font-family: sans-serif;
 `;
 
 const Wrap = styled.div`
@@ -31,6 +33,7 @@ const Wrap = styled.div`
   cursor: pointer;
   border-bottom: 2px solid #f8a700;
   border-top: 2px solid #f8a700;
+  font-family: sans-serif;
 
   h1 {
     padding:0rem;
@@ -46,11 +49,15 @@ const Dropdown = styled.div`
   background: white;
   color: black;
   width: 100%;
-  height: 100px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
+  display: inherit;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  
 
 
   p {
@@ -60,12 +67,7 @@ const Dropdown = styled.div`
 
 const Accordion = (props) => {
   const [clicked, setClicked] = useState(false);
-
-  const prov = props.Prov;
   const actividades = props.Actividades;
-
-  console.log('props-accor1'+props.Prov);
-  console.log('props-accor2',props.Actividades)
 
   const toggle = index => {
     if (clicked === index) {
@@ -89,12 +91,25 @@ const Accordion = (props) => {
                 </Wrap>
                 {clicked === index ? (
                   <Dropdown key={index}>
-                   Trabajadores Cubiertos:  {item.antNom}<br/>
-                   Siniestros Registrados: {item.siniestros}<br/>
+                   <div style={{padding: '0% 10%'}}>
+                   Trabajadores Cubiertos:  <a style={{fontWeight: 'bolder'}}>{item.antNom}</a><br/>
+                   Siniestros Registrados: <a style={{fontWeight: 'bolder'}}>{item.siniestros}</a><br/>
                   
-                   Indice de Siniestralidad (por 1.000 trabajadores): {item.indSiniestralidad}<br/>
-                   Indice de invidencia de Fallecidos (por 1.000.000 trabajadores): {item.fallecimientos}<br/>
+                   <a style={{color: 'orange'}}> Indice de Siniestralidad (por 1.000 trabajadores): <a style={{fontWeight: 'bolder'}}> {item.indSiniestralidad}</a><br/> </a>
+                   <a style={{color: 'orange'}}> Indice de invidencia de Fallecidos (por 1.000.000 trabajadores): <a style={{fontWeight: 'bolder'}}>{item.fallecimientos}</a><br/> </a>
                     {/*item.indMortalidad*/}<br/>
+                   </div>  
+                  <div style={{ color: 'white', backgroundColor: 'orange', display: 'flow-root'}}>
+                    <div style={{display: 'flow-root', padding: '0% 10%'}}>
+                      <a style={{ fontSize: 'small'}}> TODAS LAS UNIDADES PRODUCTIVAS TOTAL PAÍS</a><br/>
+
+                      <a>índice de siniestralidad (por 1000 trabajadores): <a style={{fontWeight: 'bolder'}}>40,0</a></a><br/>
+
+                      <a>índice de incidencia de fallecidos (por 1000000 trabajadores): <a style={{fontWeight: 'bolder'}}>56,5</a></a><br/>
+
+                      <a style={{ fontSize: 'small', float:'right'}}>Datos del año: 2020</a>
+                    </div>  
+                  </div>   
                   </Dropdown>
                 ) : null}
               </>

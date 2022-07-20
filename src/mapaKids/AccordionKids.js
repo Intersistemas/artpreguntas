@@ -92,16 +92,16 @@ const Accordion = (props) => {
                    Siniestros Registrados: <a style={{fontWeight: 'bolder'}}>{item.siniestros}</a><br/>
                   
                    <a style={{color: 'orange'}}> Indice de Siniestralidad (por 1.000 trabajadores): <a style={{fontWeight: 'bolder'}}> {item.indSiniestralidad}</a><br/> </a>
-                   <a style={{color: 'orange'}}> Indice de invidencia de Fallecidos (por 1.000.000 trabajadores): <a style={{fontWeight: 'bolder'}}>{item.fallecimientos}</a><br/> </a>
+                   <a style={{color: 'orange'}}> Indice de incidencia de Fallecidos (por 1.000.000 trabajadores): <a style={{fontWeight: 'bolder'}}>{item.fallecimientos}</a><br/> </a>
                     {/*item.indMortalidad*/}<br/>
                    </div>  
                   <div style={{ color: 'white', backgroundColor: 'orange', display: 'flow-root'}}>
                     <div style={{display: 'flow-root', padding: '0% 10%'}}>
                       <a style={{ fontSize: 'small'}}> TODAS LAS UNIDADES PRODUCTIVAS TOTAL PAÍS</a><br/>
 
-                      <a>índice de siniestralidad (por 1000 trabajadores): <a style={{fontWeight: 'bolder'}}>40,0</a></a><br/>
+                      <a>índice de siniestralidad (por 1.000 trabajadores): <a style={{fontWeight: 'bolder'}}>40,0</a></a><br/>
 
-                      <a>índice de incidencia de fallecidos (por 1000000 trabajadores): <a style={{fontWeight: 'bolder'}}>56,5</a></a><br/>
+                      <a>índice de incidencia de fallecidos (por 1.000.000 trabajadores): <a style={{fontWeight: 'bolder'}}>56,5</a></a><br/>
 
                       <a style={{ fontSize: 'small', float:'right'}}>Datos del año: 2020</a>
                     </div>  

@@ -4,7 +4,7 @@
       "numero": 1,
       "pregunta": "¿Cuántos años hace que está el actual sistema de riesgos de trabajo en Argentina?", 
       "opciones": ["50 años","25 años","15 años"], 
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 2,
       "dificultad": "basico"
     },
     { 
@@ -20,7 +20,7 @@
       "numero": 3,
       "pregunta": "¿Cuál es la actividad que registra los mayores riesgos laborales?", 
       "opciones": ["Actividad rural","Actividad construcción","Actividad turismo"], 
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 2,
       "dificultad": "basico"
     },
     { 

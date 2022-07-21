@@ -2,7 +2,7 @@ import React from 'react';
 //import classes from './MainHeader.module.css';
 //import logo from '../../media/Logo.svg';
 import style from './MainHeader.module.css';
-import logo1 from '../media/logo1.png';
+import logo1 from '../media/logoART.png';
 //import {Link} from "react-router-dom";
 //import { Button } from '@mui/material'
 

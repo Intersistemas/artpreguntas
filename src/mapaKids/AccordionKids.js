@@ -3,6 +3,24 @@ import { Data } from './DataKids';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import uvaIcon from './icons/uvaIcon.png';
+import vacaIcon from './icons/vacaIcon.png';
+import yerbaIcon from './icons/yerbaIcon.png';
+import azucarIcon from './icons/azucarIcon.png';
+import manzanaIcon from './icons/manzanaIcon.png';
+import { orange } from '@mui/material/colors';
+import Typography from '@mui/material/Typography';
+import check from './check.png';
+import update from 'react-addons-update';
+import del from './delete.png';
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Dialog from "@mui/material/Dialog";
+import Button from "@mui/material/Button";
+import DialogActions from "@mui/material/DialogActions";
+
+
+import Stack from '@mui/material/Stack';
 
 const AccordionSection = styled.div`
   display: flex;
@@ -63,57 +81,133 @@ const Dropdown = styled.div`
 
 const Accordion = (props) => {
   const [clicked, setClicked] = useState(false);
-  const actividades = props.Actividades;
+  const [open, setOpen] = React.useState(false);
 
-  const toggle = index => {
-    if (clicked === index) {
-      //if clicked question is already active, then close it
-      return setClicked(null);
+
+
+  const manzana=[0,0,0,0,1];
+  const vaca = [1,0,0,0,0];
+  const yerba= [0,0,1,0,0];
+  const uva= [0,0,0,1,0];
+  const azucar= [0,1,0,0,0];
+
+  let [actividades, setActividades] = useState([manzana,vaca, yerba, uva, azucar]);
+
+  let [actividadesCheck, setActividadesCheck] = useState([0, 0, 0, 0, 0]);
+
+  const iconRender = indice => {
+    switch(indice) {      
+      case 0:
+        return manzanaIcon
+        break;
+      case 1:
+        return vacaIcon
+        break;
+      case 2:
+        return yerbaIcon
+      break;
+      case 3:
+        return uvaIcon
+        break;
+      case 4:
+        return azucarIcon
+        break;
+      default:
+        break;
     }
+  }
 
-    setClicked(index);
+  const colores = indice => {
+    switch(indice) {      
+      case 0:
+        return 'yellow'
+        break;
+      case 1:
+        return 'orange'
+        break;
+      case 2:
+        return 'red'
+      break;
+      case 3:
+        return 'green'
+        break;
+      case 4:
+        return 'skyblue'
+        break;
+      default:
+        break;
+    }
+  }
+
+  const handleClick = (value,indice) => () => {
+
+      if (value == 1){
+              let newState = actividadesCheck.map((obj , ind) => {
+                // 👇️ if id equals 2, update country property
+                if (ind == indice) {
+                  return 1;
+                }
+                // 👇️ otherwise return object as is
+                return obj;
+              });
+          
+              setActividadesCheck(
+                 newState
+              );
+
+              if( newState.indexOf(0) > -1){
+        
+              }else{
+                setClicked(true)
+              }
+      }
+      
+  };
+
+  const handleClose = () => {
+    setClicked(false);
+    window.location.replace('');
+    //window.location.href = window.location.href;
   };
 
   return (
-    <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <AccordionSection>
-        <Container>
+    <>
+     <div style = {{display: 'grid', width: '90%','justify-items': 'end'}}>
+          <div style={{float:'right'}}>
+              <Typography  variant="h4" fontWeight={"bold"} color={'gray'}>¿En qué región se produce?</Typography>
+              <Typography  variant="h4" fontWeight={"bold"} color={'gray'}>Elegí un producto</Typography>
+          </div>
           {actividades.map((item, index) => {
+
+            let i = index;
             return (
-              <>
-                <Wrap onClick={() => toggle(index)} key={index}>
-                  <h1>{item.actividad}</h1>
-                  <span>{clicked === index ? <FiMinus style={{ color: 'orange'}} /> : <FiPlus style={{ color: 'orange'}} />}</span>
-                </Wrap>
-                {clicked === index ? (
-                  <Dropdown key={index}>
-                   <div style={{padding: '0% 10%'}}>
-                   Trabajadores Cubiertos:  <a style={{fontWeight: 'bolder'}}>{item.antNom}</a><br/>
-                   Siniestros Registrados: <a style={{fontWeight: 'bolder'}}>{item.siniestros}</a><br/>
-                  
-                   <a style={{color: 'orange'}}> Indice de Siniestralidad (por 1.000 trabajadores): <a style={{fontWeight: 'bolder'}}> {item.indSiniestralidad}</a><br/> </a>
-                   <a style={{color: 'orange'}}> Indice de invidencia de Fallecidos (por 1.000.000 trabajadores): <a style={{fontWeight: 'bolder'}}>{item.fallecimientos}</a><br/> </a>
-                    {/*item.indMortalidad*/}<br/>
-                   </div>  
-                  <div style={{ color: 'white', backgroundColor: 'orange', display: 'flow-root'}}>
-                    <div style={{display: 'flow-root', padding: '0% 10%'}}>
-                      <a style={{ fontSize: 'small'}}> TODAS LAS UNIDADES PRODUCTIVAS TOTAL PAÍS</a><br/>
+                <li style={{float: 'right', 'list-style-type': 'none'}}>
+                    {i == 4 ? <img style={{zoom: '25%','margin-bottom': '-7%'}} src={iconRender(i)}/> :  <img style={{zoom: '25%' }} src={iconRender(i)}/>}
+                 
+                    {item.map((reg, index2) => {
+                    return (
+                        <button
+                         onClick={handleClick(reg,i,index2)}
+                         style={{zoom:'350%','border-width': 'thin', backgroundColor: colores(index2), color: colores(index2)}}
+                         key={index2}>
+                          
+                          {/*(actividadesCheck[i] == 1 && reg == 1) ? <img style={{zoom: '20%', margin: '-10% 0%'}} src={check}/> : (actividadesCheck[i] == 2 ? <img style={{zoom: '20%', margin: '-10% 0%'}} src={del}/> : <a>B.</a>)*/}
 
-                      <a>índice de siniestralidad (por 1000 trabajadores): <a style={{fontWeight: 'bolder'}}>40,0</a></a><br/>
-
-                      <a>índice de incidencia de fallecidos (por 1000000 trabajadores): <a style={{fontWeight: 'bolder'}}>56,5</a></a><br/>
-
-                      <a style={{ fontSize: 'small', float:'right'}}>Datos del año: 2020</a>
-                    </div>  
-                  </div>   
-                  </Dropdown>
-                ) : null}
-              </>
+                          {(actividadesCheck[i] == 1 && reg == 1) ? <img style={{zoom: '20%', margin: '-10% 0%'}} src={check}/> : <a>B.</a>}
+                        </button>
+                      );
+                    })}
+                </li>
             );
           })}
-        </Container>
-      </AccordionSection>
-    </IconContext.Provider>
+      <Dialog open={clicked} onClose={handleClose}>
+        <DialogActions>
+            <Button onClick={handleClose}>X</Button>
+        </DialogActions>
+        <Typography variant="h4" fontWeight={"bold"} color={'gray'}>Felicidades Ganaste!</Typography>  
+      </Dialog>
+      </div>
+   </>
   );
 };
 

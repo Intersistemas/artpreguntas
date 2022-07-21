@@ -21,38 +21,38 @@ export const Data = [
                 {
                   actividad: "CRIA DE GANADO BOVINO",
                   ciiu: 14113,
-                  antNom: 22545,
-                  siniestros: 1922,
+                  antNom: 22.545,
+                  siniestros: 1.922,
                   fallecimientos: 6,
-                  indSiniestralidad: 85.25,
-                  indMortalidad: 266.134
+                  indSiniestralidad: '85,2',
+                  indMortalidad: '266,1'
                 },
                 {
                 actividad: "CULTIVO DE CEREALES N.C.P., EXCEPTO LOS USO FORRAJERO",
                 ciiu: 11119,
-                antNom: 7576,
+                antNom: 7.576,
                 siniestros: 395,
                 fallecimientos: 2,
-                indSiniestralidad: 52.13,
-                indMortalidad: 263.99
+                indSiniestralidad: '52,1',
+                indMortalidad: '263,9',
                 },
                 {
                 actividad: "CULTIVO DE TRIGO",
                 ciiu: 11112,
-                antNom: 5411,
+                antNom: 5.411,
                 siniestros: 459,
                 fallecimientos: 5,
-                indSiniestralidad: 84.82,
-                indMortalidad: 924.04
+                indSiniestralidad: '84,8',
+                indMortalidad: '924,0',
                 },
                 {
                 actividad: "PRODUCCION DE LECHE BOVINA",
                 ciiu: 14610,
-                antNom: 3812,
+                antNom: 3.812,
                 siniestros: 334,
                 fallecimientos: 2,
-                indSiniestralidad: 87.61,
-                indMortalidad: 524.65
+                indSiniestralidad: '87,6',
+                indMortalidad: '524,6',
                 },
           ],
     },
@@ -65,8 +65,8 @@ export const Data = [
                 antNom: 81,
                 siniestros: 7,
                 fallecimientos: 0,
-                indSiniestralidad: 86.41,
-                indMortalidad: 0
+                indSiniestralidad: '86,4',
+                indMortalidad: '0',
                 },
               
           ],
@@ -77,11 +77,11 @@ export const Data = [
         {
                 actividad: "CRIA DE GANADO BOVINO",
                 ciiu: 14113,
-                antNom: 1904,
+                antNom: 1.904,
                 siniestros: 206,
                 fallecimientos: 2,
-                indSiniestralidad: 108.19,
-                indMortalidad: 1050.42
+                indSiniestralidad: '108,1',
+                indMortalidad: '1.050,4',
                 },
                 {
                 actividad: "PRODUCCION DE SEMILLAS VARIETALES O AUTOFECUNDADAS DE CEREALES, OLEAGINOSAS Y FORRAJERAS",
@@ -89,8 +89,8 @@ export const Data = [
                 antNom: 75,
                 siniestros: 1,
                 fallecimientos: 0,
-                indSiniestralidad: 13.33,
-                indMortalidad: 0
+                indSiniestralidad: '13,3',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE TABACO",
@@ -98,8 +98,8 @@ export const Data = [
                 antNom: 74,
                 siniestros: 0,
                 fallecimientos: 0,
-                indSiniestralidad: 0,
-                indMortalidad: 0
+                indSiniestralidad: '0',
+                indMortalidad: '0',
                 },
           {
                 actividad: "CRIA DE GANADO CAPRINO-EXCEPTO LA REALIZADA EN CABAÑAS Y PARA LA PRODUCCIONDE PELOS Y DE LECHE",
@@ -107,8 +107,8 @@ export const Data = [
                 antNom: 5,
                 siniestros: 2,
                 fallecimientos: 0,
-                indSiniestralidad: 400,
-                indMortalidad: 0
+                indSiniestralidad: '400,0',
+                indMortalidad: '0',
                 },
           ],
     },
@@ -122,8 +122,8 @@ export const Data = [
                 antNom: 591,
                 siniestros: 12,
                 fallecimientos: 0,
-                indSiniestralidad: 20.3,
-                indMortalidad: 0
+                indSiniestralidad: '20,3',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "PRODUCCION DE LANA Y PELO DE OVEJA Y CABRA (CRUDA)",
@@ -131,8 +131,8 @@ export const Data = [
                 antNom: 146,
                 siniestros: 11,
                 fallecimientos: 0,
-                indSiniestralidad: 75.34,
-                indMortalidad: 0
+                indSiniestralidad: '75,3',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "CULTIVOS DE FRUTA (EJ:ARANDANOS)",
@@ -140,8 +140,8 @@ export const Data = [
                 antNom: 73,
                 siniestros: 3,
                 fallecimientos: 0,
-                indSiniestralidad: 0,
-                indMortalidad: 0
+                indSiniestralidad: '41,1',
+                indMortalidad: '0',
                 },
           
           ],
@@ -153,38 +153,38 @@ export const Data = [
         {
                 actividad: "CRIA DE GANADO BOVINO",
                 ciiu: 14113,
-                antNom: 5354,
+                antNom: 5.354,
                 siniestros: 550,
                 fallecimientos: 1,
-                indSiniestralidad: 102.72,
-                indMortalidad: 186.77
+                indSiniestralidad: '102,7',
+                indMortalidad: '186,7',
                 },
                 {
                 actividad: "PRODUCCION DE LECHE BOVINA",
                 ciiu: 14610,
-                antNom: 2809,
+                antNom: 2.809,
                 siniestros: 322,
                 fallecimientos: 0,
-                indSiniestralidad: 114.63,
-                indMortalidad: 0
+                indSiniestralidad: '114,6',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "CULTIVO DE CEREALES N.C.P., EXCEPTO LOS USO FORRAJERO",
                 ciiu: 11119,
-                antNom: 1941,
+                antNom: 1.941,
                 siniestros: 135,
                 fallecimientos: 1,
-                indSiniestralidad: 69.55,
-                indMortalidad: 515.19
+                indSiniestralidad: '69,5',
+                indMortalidad: '515,1',
                 },
                 {
                 actividad: "CULTIVO DE TRIGO",
                 ciiu: 11112,
-                antNom: 1512,
+                antNom: 1.512,
                 siniestros: 137,
                 fallecimientos: 0,
-                indSiniestralidad: 90.60,
-                indMortalidad: 0
+                indSiniestralidad: '90,6',
+                indMortalidad: '0',
                 },
         
           ],
@@ -195,11 +195,11 @@ export const Data = [
         {
                 actividad: "CRIA DE GANADO BOVINO",
                 ciiu: 14113,
-                antNom: 5938,
+                antNom: 5.938,
                 siniestros: 827,
                 fallecimientos: 2,
-                indSiniestralidad: 139.27,
-                indMortalidad: 336.81
+                indSiniestralidad: '139,2',
+                indMortalidad: '336,8',
                 },
                 {
                 actividad: "CULTIVO DE YERBA MATE",
@@ -207,8 +207,8 @@ export const Data = [
                 antNom: 615,
                 siniestros: 55,
                 fallecimientos: 0,
-                indSiniestralidad: 89.43,
-                indMortalidad: 0
+                indSiniestralidad: '89,4',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "CULTIVO DE FRUTA CITRICA",
@@ -216,8 +216,8 @@ export const Data = [
                 antNom: 445,
                 siniestros: 22,
                 fallecimientos: 0,
-                indSiniestralidad: 49.43,
-                indMortalidad: 0
+                indSiniestralidad: '49,4',
+                indMortalidad: '0',
                 },
           {
                 actividad: "CULTIVO DE TOMATE",
@@ -225,8 +225,8 @@ export const Data = [
                 antNom: 332,
                 siniestros: 12,
                 fallecimientos: 0,
-                indSiniestralidad: 34.14,
-                indMortalidad: 0
+                indSiniestralidad: '34,1',
+                indMortalidad: '0',
                 },
           ],
     },
@@ -236,29 +236,29 @@ export const Data = [
         {
                 actividad: "CULTIVO DE FRUTA CITRICA",
                 ciiu: 12200,
-                antNom: 1326,
+                antNom: 1.326,
                 siniestros: 83,
                 fallecimientos: 0,
-                indSiniestralidad: 62.59,
-                indMortalidad: 0
+                indSiniestralidad: '62,5',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "CULTIVO DE CEREALES N.C.P., EXCEPTO LOS USO FORRAJERO",
                 ciiu: 11119,
-                antNom: 1193,
+                antNom: 1.193,
                 siniestros: 114,
                 fallecimientos: 0,
-                indSiniestralidad: 95.55,
-                indMortalidad: 0
+                indSiniestralidad: '95,5',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "CRIAS DE AVES CORRAL, EXCEPTO PARA LA PRODUCCION DE HUEVOS",
                 ciiu: 14810,
-                antNom: 1089,
+                antNom: 1.089,
                 siniestros: 89,
                 fallecimientos: 0,
-                indSiniestralidad: 81.72,
-                indMortalidad: 0
+                indSiniestralidad: '81,7',
+                indMortalidad: '0',
                 },
          {
                 actividad: "PRODUCCION DE LECHE BOVINA",
@@ -266,8 +266,8 @@ export const Data = [
                 antNom: 972,
                 siniestros: 58,
                 fallecimientos: 0,
-                indSiniestralidad: 59.57,
-                indMortalidad: 0
+                indSiniestralidad: '59,5',
+                indMortalidad: '0',
                 },
           ],
     },
@@ -280,8 +280,8 @@ export const Data = [
                 antNom: 5,
                 siniestros: 0,
                 fallecimientos: 0,
-                indSiniestralidad: 0,
-                indMortalidad: 0
+                indSiniestralidad: '0',
+                indMortalidad: '0',
                 }
               
           ],
@@ -292,11 +292,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE TABACO",
                 ciiu: 11400,
-                antNom: 8973,
+                antNom: 8.973,
                 siniestros: 717,
                 fallecimientos: 2,
-                indSiniestralidad: 79.9,
-                indMortalidad: 222.89
+                indSiniestralidad: '79,9',
+                indMortalidad: '222,8',
                 },
                 {
                 actividad: "CRIA DE GANADO BOVINO",
@@ -304,8 +304,8 @@ export const Data = [
                 antNom: 50,
                 siniestros: 4,
                 fallecimientos: 1,
-                indSiniestralidad: 80,
-                indMortalidad: 20000
+                indSiniestralidad: '80,0',
+                indMortalidad: '20.000',
                 },
                
           ],
@@ -316,11 +316,11 @@ export const Data = [
         {
                 actividad: "CRIA DE GANADO BOVINO",
                 ciiu: 14113,
-                antNom: 2277,
+                antNom: 2.277,
                 siniestros: 234,
                 fallecimientos: 0,
-                indSiniestralidad: 102.76,
-                indMortalidad: 0
+                indSiniestralidad: '102,7',
+                indMortalidad: '0',
                 },
                 {
                 actividad: "APICULTURA",
@@ -328,8 +328,8 @@ export const Data = [
                 antNom: 53,
                 siniestros: 1,
                 fallecimientos: 0,
-                indSiniestralidad: 18.86,
-                indMortalidad: 0
+                indSiniestralidad: '18,8',
+                indMortalidad: '0'
                 },
                
                 
@@ -341,11 +341,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE VID PARA VINIFICAR",
                 ciiu: 12110,
-                antNom: 1253,
+                antNom: 1.253,
                 siniestros: 36,
                 fallecimientos: 0,
-                indSiniestralidad: 28.73,
-                indMortalidad: 0
+                indSiniestralidad: '28,7',
+                indMortalidad: '0'
                 },
                 
           ],
@@ -356,20 +356,20 @@ export const Data = [
         {
                 actividad: "CULTIVO DE VID PARA VINIFICAR",
                 ciiu: 12110,
-                antNom: 13808,
+                antNom: 13.808,
                 siniestros: 787,
                 fallecimientos: 0,
-                indSiniestralidad: 56.99,
-                indMortalidad: 0
+                indSiniestralidad: '56,9',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
                 ciiu: 11329,
-                antNom: 2359,
+                antNom: 2.359,
                 siniestros: 153,
                 fallecimientos: 0,
-                indSiniestralidad: 64.85,
-                indMortalidad: 0
+                indSiniestralidad: '64,8',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE HORTALIZAS DE HOJA Y DE OTRAS HORTALIZAS FRESCAS",
@@ -377,8 +377,8 @@ export const Data = [
                 antNom: 791,
                 siniestros: 52,
                 fallecimientos: 0,
-                indSiniestralidad: 65.73,
-                indMortalidad: 0
+                indSiniestralidad: '65,7',
+                indMortalidad: '0'
                 },
           {
           actividad: "CULTIVO DE FRUTAS DE CAROZO",
@@ -386,8 +386,8 @@ export const Data = [
                 antNom: 765,
                 siniestros: 52,
                 fallecimientos: 0,
-                indSiniestralidad: 67.97,
-                indMortalidad: 0
+                indSiniestralidad: '67,9',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -397,11 +397,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE YERBA MATE",
                 ciiu: 12701,
-                antNom: 4420,
+                antNom: '4.420',
                 siniestros: 440,
                 fallecimientos: 0,
-                indSiniestralidad: 99.54,
-                indMortalidad: 0
+                indSiniestralidad: '99,5',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "SERVICIO FORESTALES PARA LA EXTRACCION DE MADERA",
@@ -409,8 +409,8 @@ export const Data = [
                 antNom: 538,
                 siniestros: 55,
                 fallecimientos: 0,
-                indSiniestralidad: 102.23,
-                indMortalidad: 0
+                indSiniestralidad: '102,2',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE TABACO",
@@ -418,8 +418,8 @@ export const Data = [
                 antNom: 99,
                 siniestros: 13,
                 fallecimientos: 0,
-                indSiniestralidad: 131.31,
-                indMortalidad: 0
+                indSiniestralidad: '131,3',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -429,11 +429,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE MANZANA Y PERA",
                 ciiu: 12311,
-                antNom: 2790,
+                antNom: '2.790',
                 siniestros: 253,
                 fallecimientos: 1,
-                indSiniestralidad: 90.68,
-                indMortalidad: 358.42
+                indSiniestralidad: '90,6',
+                indMortalidad: '358,4',
                 }
       ],
     },
@@ -443,11 +443,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE MANZANA Y PERA",
                 ciiu: 12311,
-                antNom: 19593,
-                siniestros: 1265,
+                antNom: 19.593,
+                siniestros: 1.265,
                 fallecimientos: 1,
-                indSiniestralidad: 64.56,
-                indMortalidad: 51.03
+                indSiniestralidad: '64,5',
+                indMortalidad: '51,0',
                 },
                 {
                 actividad: "CULTIVO DE FRUTAS DE CAROZO",
@@ -455,8 +455,8 @@ export const Data = [
                 antNom: 181,
                 siniestros: 12,
                 fallecimientos: 0,
-                indSiniestralidad: 55.24,
-                indMortalidad: 0
+                indSiniestralidad: '55,2',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVOS DE FRUTA (EJ:ARANDANOS)",
@@ -464,8 +464,8 @@ export const Data = [
                 antNom: 180,
                 siniestros: 13,
                 fallecimientos: 0,
-                indSiniestralidad: 72.22,
-                indMortalidad: 0
+                indSiniestralidad: '72,2',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "PRODUCCION DE LANA Y PELO DE OVEJA Y CABRA (CRUDA)",
@@ -473,8 +473,8 @@ export const Data = [
                 antNom: 49,
                 siniestros: 6,
                 fallecimientos: 0,
-                indSiniestralidad:122.44,
-                indMortalidad: 0
+                indSiniestralidad: '122,4',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -484,20 +484,20 @@ export const Data = [
         {
                 actividad: "CULTIVO DE TABACO",
                 ciiu: 11400,
-                antNom: 10935,
+                antNom: 10.935,
                 siniestros: 362,
                 fallecimientos: 2,
-                indSiniestralidad: 33.10,
-                indMortalidad: 182.89
+                indSiniestralidad: '33,1',
+                indMortalidad: '182,8',
                 },
                 {
                 actividad: "CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
                 ciiu: 11329,
-                antNom: 1430,
+                antNom: '1.430',
                 siniestros: 18,
                 fallecimientos: 1,
-                indSiniestralidad: 86.71,
-                indMortalidad: 699.30
+                indSiniestralidad: '86,7',
+                indMortalidad: '699,3',
                 },
                 {
                 actividad: "CULTIVO DE VID PARA VINIFICAR",
@@ -505,8 +505,8 @@ export const Data = [
                 antNom: 633,
                 siniestros: 18,
                 fallecimientos: 0,
-                indSiniestralidad: 28.43,
-                indMortalidad: 0
+                indSiniestralidad: '28,4',
+                indMortalidad: '0'
                 },
           {
           actividad: "CULTIVO DE HORTALIZAS DE HOJA Y DE OTRAS HORTALIZAS FRESCAS",
@@ -514,8 +514,8 @@ export const Data = [
                 antNom: 65,
                 siniestros: 3,
                 fallecimientos: 0,
-                indSiniestralidad: 46.15,
-                indMortalidad: 0
+                indSiniestralidad: '46,1',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -528,8 +528,8 @@ export const Data = [
                 antNom: 276,
                 siniestros: 34,
                 fallecimientos: 1,
-                indSiniestralidad: 607.14,
-                indMortalidad: 3623.18
+                indSiniestralidad: '607,1',
+                indMortalidad: '3.623,1',
                 },
               
           ],
@@ -542,11 +542,11 @@ export const Data = [
         {
                 actividad: "CULTIVO DE VID PARA VINIFICAR",
                 ciiu: 12110,
-                antNom: 2790,
+                antNom: '2.790',
                 siniestros: 197,
                 fallecimientos: 0,
-                indSiniestralidad: 70.60,
-                indMortalidad: 0
+                indSiniestralidad: '70,6',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
@@ -554,8 +554,8 @@ export const Data = [
                 antNom: 312,
                 siniestros: 31,
                 fallecimientos: 0,
-                indSiniestralidad: 99.35,
-                indMortalidad: 0
+                indSiniestralidad: '99,3',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVOS DE FRUTA (EJ:ARANDANOS)",
@@ -563,8 +563,8 @@ export const Data = [
                 antNom: 131,
                 siniestros: 10,
                 fallecimientos: 0,
-                indSiniestralidad: 76.33,
-                indMortalidad: 0
+                indSiniestralidad: '76,3',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE TOMATE",
@@ -572,8 +572,8 @@ export const Data = [
                 antNom: 50,
                 siniestros: 2,
                 fallecimientos: 0,
-                indSiniestralidad: 47.61,
-                indMortalidad: 0
+                indSiniestralidad: '47,6',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -586,8 +586,8 @@ export const Data = [
                 antNom: 252,
                 siniestros: 4,
                 fallecimientos: 0,
-                indSiniestralidad: 15.87,
-                indMortalidad: 0
+                indSiniestralidad: '15,8',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "PRODUCCION DE LANA Y PELO DE OVEJA Y CABRA (CRUDA)",
@@ -595,8 +595,8 @@ export const Data = [
                 antNom: 144,
                 siniestros: 4,
                 fallecimientos: 0,
-                indSiniestralidad: 27.77,
-                indMortalidad: 0
+                indSiniestralidad: '27,7',
+                indMortalidad: '0'
                 },
                 
           ],
@@ -607,38 +607,38 @@ export const Data = [
               {
                 actividad: "CRIA DE GANADO BOVINO",
                 ciiu: 14113,
-                antNom: 5908,
+                antNom: 5.908,
                 siniestros: 655,
                 fallecimientos: 3,
-                indSiniestralidad: 110.86,
-                indMortalidad: 507.78
+                indSiniestralidad: '110,8',
+                indMortalidad: '507,7',
                 },
                 {
                 actividad: "PRODUCCION DE LECHE BOVINA",
                 ciiu: 14610,
-                antNom: 2817,
+                antNom: 2.817,
                 siniestros: 333,
                 fallecimientos: 0,
-                indSiniestralidad: 118.21,
-                indMortalidad: 0
+                indSiniestralidad: '118,2',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE CEREALES N.C.P., EXCEPTO LOS USO FORRAJERO",
                 ciiu: 11119,
-                antNom: 1262,
+                antNom: 1.262,
                 siniestros: 93,
                 fallecimientos: 0,
-                indSiniestralidad: 73.69,
-                indMortalidad: 0
+                indSiniestralidad: '73,6',
+                indMortalidad: '0'
                 },
           {
                 actividad: "CULTIVO DE TRIGO",
                 ciiu: 11112,
-                antNom: 1080,
+                antNom: '1.080',
                 siniestros: 73,
                 fallecimientos: 0,
-                indSiniestralidad: 67.59,
-                indMortalidad: 0
+                indSiniestralidad: '67,5',
+                indMortalidad: '0'
                 },
           ],
     },
@@ -651,8 +651,8 @@ export const Data = [
                 antNom: 282,
                 siniestros: 3,
                 fallecimientos: 1,
-                indSiniestralidad: 10.63,
-                indMortalidad: 3546.09
+                indSiniestralidad: '10,6',
+                indMortalidad: '3.546,0',
                 },
                 {
                 actividad: "PRODUCCION DE SEMILLAS VARIETALES O AUTOFECUNDADAS DE CEREALES, OLEAGINOSAS Y FORRAJERAS",
@@ -660,8 +660,8 @@ export const Data = [
                 antNom: 13,
                 siniestros: 2,
                 fallecimientos: 0,
-                indSiniestralidad: 153.84,
-                indMortalidad: 0
+                indSiniestralidad: '153,8',
+                indMortalidad: '0'
                 },
                
           ],
@@ -675,8 +675,8 @@ export const Data = [
                 antNom: 10,
                 siniestros: 0,
                 fallecimientos: 0,
-                indSiniestralidad: 0,
-                indMortalidad: 0
+                indSiniestralidad: '0',
+                indMortalidad: '0'
                 },
                
           ],
@@ -687,20 +687,20 @@ export const Data = [
         {
                 actividad: "CULTIVO DE FRUTA CITRICA",
                 ciiu: 12200,
-                antNom: 3534,
+                antNom: 3.534,
                 siniestros: 178,
                 fallecimientos: 0,
-                indSiniestralidad: 50.36,
-                indMortalidad: 0
+                indSiniestralidad: '50,3',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVO DE BULBOS, RAICES Y HORTALIZAS DE FRUTO N.C.P",
                 ciiu: 11329,
-                antNom: 1325,
+                antNom: 1.325,
                 siniestros: 19,
                 fallecimientos: 0,
-                indSiniestralidad: 14.33,
-                indMortalidad: 0
+                indSiniestralidad: '14,3',
+                indMortalidad: '0'
                 },
                 {
                 actividad: "CULTIVOS DE FRUTA (EJ:ARANDANOS)",
@@ -708,8 +708,8 @@ export const Data = [
                 antNom: 258,
                 siniestros: 14,
                 fallecimientos: 0,
-                indSiniestralidad: 54.26,
-                indMortalidad: 0
+                indSiniestralidad: '54,2',
+                indMortalidad: '0'
                 },
           ],
     } 

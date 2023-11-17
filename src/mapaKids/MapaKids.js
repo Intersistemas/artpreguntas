@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 //import YouTube from 'react-youtube';
 import './estilosKids.css';
 import Typography from '@mui/material/Typography';
-import Accordion from './AccordionKids';
-import { Data } from './DataKids';    
+import Accordion from './AccordionKids';   
 import { Box } from '@mui/material';
 import { Button } from '@mui/material'
 import { Link } from "react-router-dom";
@@ -33,13 +32,7 @@ export class MapaKids extends Component {
             actividades:[]
             }
       }
-
-      funcion2(d){
-        let provincia = Data.find(({provincia}) => provincia === d)
-        console.log('prov selec: ',provincia);
-        this.setState({ prov: provincia.provincia, actividades: provincia.actividades})
-      }
-
+      
     render() {
 
         const opts = {
@@ -105,12 +98,12 @@ export class MapaKids extends Component {
                     </div>
 
                     <Box style={{paddingTop: '10%'}}> 
-                            <Link to="/"> 
-                                <Button variant="contained">
-                                    Volver al Menu 
-                                </Button>       
-                            </Link>   
-                        </Box>
+                        <Link to="/"> 
+                            <Button variant="contained">
+                                Volver al Menu 
+                            </Button>       
+                        </Link>   
+                    </Box>
                    
                     
             </Box>          
